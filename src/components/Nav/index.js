@@ -3,26 +3,37 @@ import "../../app.css";
 
 function Nav(props) {
   return (
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="https://gunfightingyeti.github.io/Assignment3/Bootstrap%20Website/index.html" target="_blank" rel="noopener noreferrer">
-        <img class="logo" src="./assets/images/apple-icon-57.png" width="50" height="50" alt="Tim Lewis Logo"/>
-        </a>
-        <div class="navbar-brand ml-2 title">Reactive News</div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+        {/* <a className="navbar-brand" href="https://gunfightingyeti.github.io/Assignment3/Bootstrap%20Website/index.html" target="_blank" rel="noopener noreferrer">
+        <img className="logo" src="./assets/images/apple-icon-57.png" width="50" height="50" alt="Tim Lewis Logo"/>
+        </a> */}
+        <a href="/"><div className="navbar-brand ml-2 title">Life Score</div></a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                <span className="navbar-toggler-icon"></span>
             </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active ml-2">
-                    <a class="nav-link" href="/">Search</a>
+        <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+                <li className="nav-item active ml-2">
+                    <a className="nav-link font" href="/"><i className="fas fa-home"></i> Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link ml-2" href="/saved">Saved</a>
+                <li className="nav-item">
+                    <a className="nav-link font ml-2" href="/friends"><i className="fas fa-user-friends"></i> Friends</a>
                 </li>
-                {/* <li class="nav-item ml-2">
-                    <a href="/scrape"><button class="nav-link btn btn-danger"><i class="far fa-newspaper"></i> Scrape New Articles</button></a>
-                </li> */}
+                <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle font ml-2" id="navbarDropdownMenuLink" href="/browse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-journal-whills"></i> Browse</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a className="dropdown-item font" href="/browseAll">All</a>
+                    <a className="dropdown-item font" href="/browseLife">Life</a>
+                    <a className="dropdown-item font" href="/browseFood">Food</a>
+                    <a className="dropdown-item font" href="/browseSocial">Social</a>
+                    <a className="dropdown-item font" href="/browseTravel">Travel</a>
+                    <a className="dropdown-item font" href="/browseViolent">Violent</a>
+                    </div>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link font ml-2" href="/me"><i className="fas fa-user"></i> Me</a>
+                </li>
             </ul>
         </div>
     </nav>
