@@ -1,7 +1,7 @@
 
 /* App */
-.App {
-  text-align: center;
+body {
+  margin-bottom: 30px;
 }
 
 .App-header {
@@ -17,6 +17,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.title {
+  justify-content: center;
 }
 
 /* global styles */
@@ -44,10 +48,16 @@ body {
   border-bottom-style: solid;
 }
 
-.title {
+.pageTitle {
   font-size: 2.5rem;
   font-weight: 500;
   padding: 5px 15px 5px 15px;
+  padding-bottom: 15px;
+  border-bottom: #282c34;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  text-align: center;
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -65,3 +75,85 @@ body {
   background-position-y: 68%;
 }
 
+/* Home */
+.row1 {
+  padding-bottom: 15px;
+  border-bottom: #282c34;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+.avatar {
+  background-color: #005000;
+  max-width: 200px;
+  border-style: double;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 50%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.playerInfo {
+  margin: 5px;
+}
+
+.playerName {
+  margin-top: 20px;
+}
+
+.row2 {
+  margin: 10px;
+  margin-top: 20px;
+  border: #282c34;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  padding: 15px 8px 10px 15px;
+}
+
+#latest {
+  color: #005000
+}
+
+.row3 {
+  text-align: center;
+}
+
+.btn {
+  align-content: center;
+  margin: 20px 10px 20px 10px;
+  font-size: 3rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 15px;
+  height: 6rem;
+  width: 18rem;
+  color: #271003;
+}
+
+/* Friends */
+.friendCard {
+  background-image: url("/assets/images/placeholder.jpg");
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  border-style: double;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #271003 40%, #a14007 117%);
+  height: 30px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}

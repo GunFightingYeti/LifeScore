@@ -29,10 +29,14 @@ function Nav(props) {
                     <a className="dropdown-item font" href="/browseSocial">Social</a>
                     <a className="dropdown-item font" href="/browseTravel">Travel</a>
                     <a className="dropdown-item font" href="/browseViolent">Violent</a>
+                    <a className="dropdown-item font" href="/saved">Saved</a>
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link font ml-2" href="/me"><i className="fas fa-user"></i> Me</a>
+                    <a className="nav-link font ml-2" href="/player"><i className="fas fa-user"></i> Me</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link font ml-2" href="/login"><i className="fas fa-sign-out-alt"></i> Logout</a>
                 </li>
             </ul>
         </div>

@@ -1,3 +1,4 @@
 module.exports = {
-  Achievement: require("./achievement")
+  Achievement: require("./achievement"),
+  Players: require("./players")
 };
