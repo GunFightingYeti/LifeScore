@@ -16,16 +16,16 @@ function Home(props) {
         </div>
 
         <div className="row row2">
-        <h3>Props: <span id="latest">Punch Down a Tree</span></h3>
+        <h3>Latest: <span className="achievement">Climb a 14er</span></h3>
         </div>
 
         <div className="row row3">
             <div className="col-12">
 
-                <a className="btn" href="/browse">Browse</a>
-                <a className="btn" href="/friends">Friends</a>
-                <a className="btn" href="/stats">Stats</a>
-                <a className="btn" href="/saved">Saved</a>
+                <a className="homebtn" href="/browse">Browse</a>
+                <a className="homebtn" href="/friends">Friends</a>
+                <a className="homebtn" href="/stats">Stats</a>
+                <a className="homebtn" href="/saved">Saved</a>
 
             </div>
         </div>

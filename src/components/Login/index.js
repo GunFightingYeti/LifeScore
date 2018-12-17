@@ -30,7 +30,7 @@ function Login(props) {
                     <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
                 </div>
 
-                <button type="submit" className="btn btn-primary mt-3">Login</button>
+                <a href="/" className="login btn btn-success mt-3" id="login">Login</a>
             </form>
         </div>
     </div>

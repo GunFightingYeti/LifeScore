@@ -21,7 +21,9 @@ body {
 
 .title {
   justify-content: center;
+  font-size: 2.5rem;
 }
+
 
 /* global styles */
 body {
@@ -35,6 +37,13 @@ body {
 .white-shadow {
   text-shadow: 1px 1px 3px white;
 }
+
+
+/* Login */
+.login {
+  border-radius: 5px;
+}
+
 
 /* Navbar */
 .navbar-brand, .nav-link {
@@ -67,6 +76,7 @@ body {
   background-color: #a14007;
 }
 
+
 /* Jumbotron */
 .jumbotron {
   background-image: url(/assets/images/sunset.jpg);
@@ -74,6 +84,7 @@ body {
   background-size: cover;
   background-position-y: 68%;
 }
+
 
 /* Home */
 .row1 {
@@ -112,16 +123,15 @@ body {
   padding: 15px 8px 10px 15px;
 }
 
-#latest {
-  color: #005000
+.achievement {
+  color: #a14007;
 }
 
 .row3 {
   text-align: center;
 }
 
-.btn {
-  align-content: center;
+.homebtn {
   margin: 20px 10px 20px 10px;
   font-size: 3rem;
   border-style: solid;
@@ -131,7 +141,28 @@ body {
   height: 6rem;
   width: 18rem;
   color: #271003;
+  display: inline-block;
+  padding: .375rem .75rem;
 }
+
+.homebtn:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #005000;
+}
+
+
+/* Player */
+.value {
+  padding: 5px 10px 5px 0px;
+  /* float: right; */
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
 
 /* Friends */
 .friendCard {
@@ -145,6 +176,13 @@ body {
   border-radius: 50%;
   margin: 20px;
 }
+
+.friendCard:hover {
+  cursor: pointer;
+  color: #005000;
+  border-color: #005000;
+}
+
 
 /* Footer */
 footer {

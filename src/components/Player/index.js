@@ -22,6 +22,18 @@ function Player(props) {
             </div>
         </div>
 
+        <div className="row row2">
+        <h3>Latest: <span className="value">15 V</span><span className="achievement">Climb a 14er</span></h3>
+        </div>
+
+        <div className="row row2">
+            <ul>
+                <li><span className="value">5 V</span> - <span className="achievement">Cut ties with all the lies you've been living in</span></li>
+                <li><span className="value">20 V</span> - <span className="achievement">Eat a 1,000,000+ scoville pepper</span></li>
+                <li><span className="value">25 V</span> - <span className="achievement">Break a brick with your hand (without breaking your hand) </span></li>
+            </ul>
+        </div>
+
     </div>
     );  
 }
