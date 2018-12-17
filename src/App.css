@@ -2,6 +2,7 @@
 /* App */
 body {
   margin-bottom: 30px;
+  background-image: url("/assets/images/background.jpg")
 }
 
 .App-header {
@@ -139,7 +140,7 @@ body {
   border-color: black;
   border-radius: 15px;
   height: 6rem;
-  width: 18rem;
+  width: 17rem;
   color: #271003;
   display: inline-block;
   padding: .375rem .75rem;
@@ -181,6 +182,9 @@ li {
   cursor: pointer;
   color: #005000;
   border-color: #005000;
+  border-width: 7px;
+  border-style: solid;
+  transform: scale(1.2);
 }
 
 

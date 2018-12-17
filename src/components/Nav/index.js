@@ -20,6 +20,7 @@ function Nav(props) {
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle font ml-2" id="navbarDropdownMenuLink" href="/browse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-journal-whills"></i> Browse</a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a className="dropdown-item font" href="/browse">Categories</a>
                     <a className="dropdown-item font" href="/browseAll">All</a>
                     <a className="dropdown-item font" href="/browseLife">Life</a>
                     <a className="dropdown-item font" href="/browseFood">Food</a>

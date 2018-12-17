@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
 import Nav from './components/Nav';
 import Login from './components/Login';
-import Questionnaire from './components/Questionnaire';
+import Quiz from './components/Quiz';
 import Home from './components/Home';
 import Friends from './components/Friends';
+import Friend from './components/Friend';
 import Player from './components/Player';
 import Browse from './components/Browse';
 import Stats from './components/Stats';
@@ -20,9 +21,10 @@ function App() {
           <Nav/>
           <Wrapper>
             <Route exact path="/login" component={Login} />
-            <Route exact path="/getStats" component={Questionnaire} />
+            <Route exact path="/getStats" component={Quiz} />
             <Route exact path="/" component={Home} />
             <Route exact path="/friends" component={Friends} />
+            <Route exact path="/friend" component={Friend} />
             <Route exact path="/player" component={Player} />
             <Route path="/browse" component={Browse} />
 

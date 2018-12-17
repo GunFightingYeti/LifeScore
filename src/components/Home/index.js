@@ -7,7 +7,7 @@ function Home(props) {
 
         <div className="row row1">
             <div>
-                <img className="avatar" src="/assets/images/velocibarkSquare.png" alt="Player Avatar"/>
+                <a href="/player"><img className="avatar" src="/assets/images/velocibarkSquare.png" alt="Player Avatar"/></a>
             </div>
             <div className="playerInfo justify-content-start">
                 <h1 className="playerName">Velocibark</h1>
@@ -16,7 +16,8 @@ function Home(props) {
         </div>
 
         <div className="row row2">
-        <h3>Latest: <span className="achievement">Climb a 14er</span></h3>
+        <h3>Last achievement:</h3>
+        <h3 className="achievement">Climb a 14,000 ft. tall mountain</h3>
         </div>
 
         <div className="row row3">
