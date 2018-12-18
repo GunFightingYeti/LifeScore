@@ -13,7 +13,7 @@ function Footer(props) {
                         className="mx-2">
                         <i className="fab fa-github"></i> Lewis Github</a> */}
 
-                    <span className="float-center">&copy;  Velocibark 2018 - Tim Lewis and Robert Anderson</span>
+                    <span className="float-center"><i class="far fa-copyright"></i>  Velocibark 2018 - Tim Lewis and Robert Anderson</span>
                 </div>
 
             </div>

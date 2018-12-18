@@ -1,24 +1,21 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
-
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/life-score"
+  "mongodb://localhost/LifeScore"
 );
 
 const achievementSeed = [
   {
     name: "Get born!",
-    description: "Be born into this fantastic glorios world",
+    description: "Be born into this fantastic glorious world",
     category: "Life",
     worth: 5,
     passed: false,
     saved: false,
     date: new Date(Date.now())
   },
-
 ];
 
 db.Achievement
