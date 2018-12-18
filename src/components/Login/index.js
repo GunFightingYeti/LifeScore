@@ -1,6 +1,6 @@
 import React from "react";
 import Jumbotron from '../Jumbotron';
-import "./../../app.css";
+import "../../app.css";
 
 function Login(props) {
   return (
