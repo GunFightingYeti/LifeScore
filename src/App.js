@@ -12,7 +12,7 @@ import Browse from './components/Browse';
 import Stats from './components/Stats';
 import Saved from './components/Saved';
 import Footer from './components/Footer';
-import './app.css';
+import './App.css';
 
 function App() {
   return (
