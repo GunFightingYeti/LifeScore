@@ -1,5 +1,4 @@
 import React from "react";
-// import "../../app.css";
 
 function Player(props) {
   return (
