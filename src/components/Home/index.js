@@ -11,7 +11,8 @@ function Home(props) {
             </div>
             <div className="playerInfo justify-content-start">
                 <h1 className="playerName">Velocibark</h1>
-                <h1>Score: <span className="playerScore">14,243</span></h1>
+                <h1>Score: <span className="playerScore">7,244</span></h1>
+                <h1>Believability: <span className="playerTrust">253</span></h1>
             </div>
         </div>
 

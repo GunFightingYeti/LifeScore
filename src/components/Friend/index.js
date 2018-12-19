@@ -12,6 +12,8 @@ function Friend(props) {
             <div className="playerInfo justify-content-start">
                 <h1 className="playerName">Knurtts</h1>
                 <h1>Score: <span className="playerScore">17,652</span></h1>
+                <h1>Believability: <span className="playerTrust">314</span></h1>
+
             </div>
         </div>
 
