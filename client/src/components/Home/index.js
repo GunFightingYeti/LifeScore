@@ -1,7 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
+import API from "../../utils/API";
 
-function Home(props) {
-  return (
+class Home extends Component {
+  state = {
+  achievements: []
+  };
+  
+  loadAchievements = () =>{
+      API.getAchievements()
+      .then(res => 
+      this.setState({
+          achievements: res.data
+      })
+      )
+      .catch(err => console.log(err))
+  }
+  
+  componentDidMount() {
+      this.loadAchievements();
+      console.log(this.state.achievements);
+  }
+
+  render () {
+      return (
     <div className="container home">
 
         <div className="row row1">
@@ -32,7 +53,8 @@ function Home(props) {
         </div>
 
     </div>
-    );  
+    );
+  }
 }
 
 export default Home;

@@ -14,6 +14,7 @@ const achievementSeed = [
     worth: 5,
     passed: false,
     saved: false,
+    belief: 0,
     date: new Date(Date.now())
   },
 ];

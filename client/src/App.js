@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
+// Commpontents
 import Wrapper from "./components/Wrapper";
 import Nav from './components/Nav';
 import Login from './components/Login';
@@ -12,6 +14,7 @@ import Browse from './components/Browse';
 import Stats from './components/Stats';
 import Saved from './components/Saved';
 import Footer from './components/Footer';
+
 import './App.css';
 
 function App() {

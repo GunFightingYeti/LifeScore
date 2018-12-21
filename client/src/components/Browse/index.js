@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Browse(props) {
-  return (
+class Browse extends Component {
+
+render() {
+    return (
     <div className="container">
         <div className="row">
 
@@ -26,6 +28,7 @@ function Browse(props) {
         </div>
     </div>
     );  
+}
 }
 
 export default Browse;
