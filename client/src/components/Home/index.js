@@ -7,13 +7,13 @@ class Home extends Component {
     avatar: "/assets/images/elizabeth.jpg",
     score: 0,
     believability: 0,
-    latest: "Climb a 14,000 ft. tall mountain",
-    achievements: ["Climb a 14,000 ft. tall mountain"]
+    latest: [],
+    achievements: []
   }
 
   loadAchievements = () =>{
     API.getAchievements()
-    .then(res => this.setState({achievements: res.data}))
+    .then(res => this.setState({latest: res.data}))
     .catch(err => console.log(err))
   }
   
@@ -38,7 +38,7 @@ class Home extends Component {
         </div>
 
         <div className="row row2">
-        <h3 className="achievement">Latest: {this.state.latest}</h3>
+        <h3 className="achievement">Latest: {this.state.latest.name}</h3>
         </div>
 
         <div className="row row3">
