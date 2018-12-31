@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
+  // Gets all achievements
   getAchievements: function() {
-    return axios.get("/api/browse/achievements");
+    return axios.get("/api/achievements");
   },
 
 

@@ -3,22 +3,23 @@ import API from "../../utils/API";
 
 class Home extends Component {
   state = {
-  achievements: []
-  };
-  
+    userName: "Elizabeth",
+    avatar: "/assets/images/elizabeth.jpg",
+    score: 0,
+    believability: 0,
+    latest: "Climb a 14,000 ft. tall mountain",
+    achievements: ["Climb a 14,000 ft. tall mountain"]
+  }
+
   loadAchievements = () =>{
-      API.getAchievements()
-      .then(res => 
-      this.setState({
-          achievements: res.data
-      })
-      )
-      .catch(err => console.log(err))
+    API.getAchievements()
+    .then(res => this.setState({achievements: res.data}))
+    .catch(err => console.log(err))
   }
   
   componentDidMount() {
-      this.loadAchievements();
-      console.log(this.state.achievements);
+    this.loadAchievements();
+    console.log("Achievements:\n", this.state.achievements);
   }
 
   render () {
@@ -27,18 +28,17 @@ class Home extends Component {
 
         <div className="row row1">
             <div>
-                <a href="/player"><img className="avatar" src="/assets/images/velocibarkSquare.png" alt="Player Avatar"/></a>
+                <a href="/player"><img className="avatar" src={this.state.avatar} alt="Player Avatar"/></a>
             </div>
             <div className="playerInfo justify-content-start">
-                <h1 className="playerName">Velocibark</h1>
-                <h1>Score: <span className="playerScore">7,244</span></h1>
-                <h1>Believability: <span className="playerTrust">253</span></h1>
+                <h1>{this.state.userName}</h1>
+                <h1>Score: {this.state.score}</h1>
+                <h1>Believability: {this.state.believability}</h1>
             </div>
         </div>
 
         <div className="row row2">
-        <h3>Last achievement:</h3>
-        <h3 className="achievement">Climb a 14,000 ft. tall mountain</h3>
+        <h3 className="achievement">Latest: {this.state.latest}</h3>
         </div>
 
         <div className="row row3">

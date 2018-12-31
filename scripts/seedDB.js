@@ -19,9 +19,31 @@ const achievementSeed = [
   },
 ];
 
+const playerSeed = [
+  {
+    name: "WunderBar",
+    score: 12845,
+    avatar: "/assets/images/elizabeth.jpg",
+    believeability: 6258,
+    date: new Date(Date.now())
+  },
+];
+
 db.Achievement
-  .remove({})
+  .deleteMany({})
   .then(() => db.Achievement.collection.insertMany(achievementSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+db.Players
+  .deleteMany({})
+  .then(() => db.Players.collection.insertMany(playerSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

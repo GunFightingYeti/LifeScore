@@ -3,8 +3,8 @@ const achievementController = require("../../controllers/achievementController")
 
 // Matches with "/api/achievement"
 router.route("/achievements")
-.get(achievementController.findAll)
-.post(achievementController.create);
+  .get(achievementController.findAll)
+  .post(achievementController.create);
 
 // Matches with "/api/achievement/:id"
 router

@@ -8,6 +8,7 @@ const achievementSchema = new Schema({
   worth: {type: Number, required: true},
   passed: {type: Boolean, required: true, default: false},
   saved:  {type: Boolean, required: true, default: false},
+  belief: {type: Number, required: true},
   date: { type: Date, default: Date.now }
 });
 
