@@ -9,7 +9,7 @@ module.exports = {
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-    console.log("Response: ", res.body);
+    console.log("Response: \n", res.body);
   },
   findById: function(req, res) {
     db.Achievement

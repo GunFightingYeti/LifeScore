@@ -5,7 +5,10 @@ export default {
   getAchievements: function() {
     return axios.get("/api/achievements");
   },
-
+  getPlayer: function() {
+    return axios.get("/api/player");
+  },
+  
 
   // // Gets the book with the given id
   // getBook: function(id) {

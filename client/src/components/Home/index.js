@@ -3,8 +3,8 @@ import API from "../../utils/API";
 
 class Home extends Component {
   state = {
-    userName: "Elizabeth",
-    avatar: "/assets/images/elizabeth.jpg",
+    userName: "",
+    avatar: "",
     score: 0,
     believability: 0,
     latest: [],
@@ -13,11 +13,18 @@ class Home extends Component {
 
   loadAchievements = () =>{
     API.getAchievements()
-    .then(res => this.setState({latest: res.data}))
+    .then(res => this.setState({latest: res.data.name}))
+    .catch(err => console.log(err))
+  }
+
+  loadPlayer = () =>{
+    API.getPlayer()
+    .then(res => this.setState({userName: res.data.name, score: res.data.score, avatar: res.data.avatar, believability: res.data.believability}))
     .catch(err => console.log(err))
   }
   
   componentDidMount() {
+    this.loadPlayer();
     this.loadAchievements();
     console.log("Achievements:\n", this.state.achievements);
   }
@@ -38,7 +45,7 @@ class Home extends Component {
         </div>
 
         <div className="row row2">
-        <h3 className="achievement">Latest: {this.state.latest.name}</h3>
+        <h3 className="achievement">Latest: {this.state.latest}</h3>
         </div>
 
         <div className="row row3">
