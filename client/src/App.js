@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
 import Nav from './components/Nav';
 import Login from './components/Login';
+import Create from './components/Create';
 import Quiz from './components/Quiz';
 import Home from './components/Home';
 import Friends from './components/Friends';
@@ -24,7 +25,8 @@ function App() {
           <Nav/>
           <Wrapper>
             <Route exact path="/login" component={Login} />
-            <Route exact path="/getStats" component={Quiz} />
+            <Route exact path="/create" component={Create} />
+            <Route exact path="/quiz" component={Quiz} />
             <Route exact path="/" component={Home} />
             <Route exact path="/friends" component={Friends} />
             <Route exact path="/friend" component={Friend} />

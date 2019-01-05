@@ -13,20 +13,21 @@ class Home extends Component {
 
   loadAchievements = () =>{
     API.getAchievements()
-    .then(res => this.setState({latest: res.data.name}))
+    .then(res => {
+      this.setState({latest: res.data[0].name}); })
     .catch(err => console.log(err))
   }
 
   loadPlayer = () =>{
     API.getPlayer()
-    .then(res => this.setState({userName: res.data.name, score: res.data.score, avatar: res.data.avatar, believability: res.data.believability}))
+    .then(res => {
+      this.setState({userName: res.data[0].name, score: res.data[0].score, avatar: res.data[0].avatar, believability: res.data[0].believability}); })
     .catch(err => console.log(err))
   }
   
   componentDidMount() {
     this.loadPlayer();
     this.loadAchievements();
-    console.log("Achievements:\n", this.state.achievements);
   }
 
   render () {

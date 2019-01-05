@@ -2,15 +2,13 @@ const db = require("../models");
 
 module.exports = {
   findAll: function(req, res) {
-    console.log("-----------------------------------");
-    console.log("Player Request: ", req.query);
     db.Player
-      .find()
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-    console.log("Player Response: ", res.body);
-  },
+    .find(req.query)
+    .sort({ date: -1 })
+    .then(dbModel => {
+      res.json(dbModel); })
+    .catch(err => res.status(422).json(err));
+},
   findById: function(req, res) {
     db.Player
       .findById(req.params.id)
