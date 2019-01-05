@@ -18,14 +18,28 @@ function Create(props) {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" required/>
+                    <label htmlFor="password">Password</label>
+                    <input type="password" className="form-control" id="password" placeholder="Password" required/>
                     <div className="invalid-feedback">
                         Please provide a valid password.
                     </div>
                 </div>
+                <div className="form-group">
+                      <label htmlFor="confirmPassword">Confirm Password</label>
+                      <input type="password" className="form-control" id="confirmPassword" placeholder="Password" required/>
+                      <div className="invalid-feedback">
+                          Please provide a valid password.
+                      </div>
+                  </div>
+                <div className="form-group">
+                    <label htmlFor="profilePicture">Profile Picture</label>
+                    <input type="file" className="form-control-file" id="profilePicture" placeholder="Upload" required/>
+                    <div className="invalid-feedback">
+                        Please choose a profile picture.
+                    </div>
+                </div>
 
-                <a href="/" className="login btn btn-success mt-3" id="login">Login</a>
+                <a href="/quiz" className="login btn btn-success mt-3" id="login">Create</a>
             </form>
         </div>
     </div>
