@@ -4,11 +4,11 @@ const playerController = require("../../controllers/playerController");
 
 // Matches with "/api/achievement"
 router.route("/achievements")
-  .get(achievementController.findAll);
+  .post(achievementController.findAll);
 
   // Matches with "/api/player"
 router.route("/player")
-  .get(playerController.findAll);
+  .post(playerController.findAll);
 
 // Matches with "/api/achievement/:id"
 router
