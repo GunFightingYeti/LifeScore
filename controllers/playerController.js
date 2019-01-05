@@ -4,7 +4,7 @@ module.exports = {
   findAll: function(req, res) {
     console.log("-----------------------------------");
     console.log("Player Request: ", req.query);
-    db.Achievement
+    db.Player
       .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
@@ -12,19 +12,19 @@ module.exports = {
     console.log("Player Response: ", res.body);
   },
   findById: function(req, res) {
-    db.Achievement
+    db.Player
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.Achievement
+    db.Player
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.Achievement
+    db.Player
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

@@ -3,10 +3,10 @@ import axios from "axios";
 export default {
   // Gets all achievements
   getAchievements: function() {
-    return axios.get("/api/achievements");
+    return axios.post("/api/achievements");
   },
   getPlayer: function() {
-    return axios.get("/api/player");
+    return axios.post("/api/player");
   },
   
 
