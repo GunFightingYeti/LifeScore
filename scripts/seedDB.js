@@ -41,13 +41,6 @@ const playerSeed = [
     believability: 314,
     date: new Date(Date.now())
   },
-  {
-    name: "WunderBare",
-    score: 12845,
-    avatar: "/assets/images/elizabeth.jpg",
-    believability: 6258,
-    date: new Date(Date.now())
-  },
 ];
 
 db.Achievement
