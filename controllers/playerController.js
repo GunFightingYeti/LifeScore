@@ -5,7 +5,7 @@ module.exports = {
     console.log("-----------------------------------");
     console.log("Player Request: ", req.query);
     db.Player
-      .find(req.query)
+      .find()
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
