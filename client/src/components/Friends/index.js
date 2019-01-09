@@ -3,33 +3,19 @@ import API from "../../utils/API";
 
 class Friends extends Component {
   state = {
-    userName: "",
-    avatar: "",
-    score: 0,
-    believability: 0,
-    latest: [],
-    achievements: []
-  }
-
-  loadAchievements = () =>{
-    API.getAchievements()
-    .then(res => {
-      console.log(res);
-      this.setState({latest: res.data[0].name}); })
-    .catch(err => console.log(err))
+    friends: []
   }
 
   loadPlayer = () =>{
     API.getPlayer()
     .then(res => {
-      console.log(res);
-      this.setState({userName: res.data[0].name, score: res.data[0].score, avatar: res.data[0].avatar, believability: res.data[0].believability}); })
+      // console.log(res);
+      this.setState({friends: res.data[0].friends}); })
     .catch(err => console.log(err))
   }
   
   componentDidMount() {
     this.loadPlayer();
-    this.loadAchievements();
   }
 
   render () {
@@ -46,15 +32,18 @@ class Friends extends Component {
           <div className="row3">
               <div className="col-12">
 
-                  <a href="/friend"><button className="friendCard">GunFightingYeti</button></a>
-                  <a href="/friend"><button className="friendCard">Knurtts</button></a>
-                  <a href="/friend"><button className="friendCard">Scarab27</button></a>
-                  <a href="/friend"><button className="friendCard">Drizzt172</button></a>
-                  <a href="/friend"><button className="friendCard">WriterManda</button></a>
-                  <a href="/friend"><button className="friendCard">GenZip</button></a>
-                  <a href="/friend"><button className="friendCard">Krontime</button></a>
-                  <a href="/friend"><button className="friendCard">Gummybearx3</button></a>
-                  <a href="/friend"><button className="friendCard">SassyCat</button></a>
+                {this.state.friends.length ? (
+                  <div>
+                    {/* <a href={"/friend/" + friend._id}> */}
+                      {this.state.friends.map((friend, index) => {
+                        return (
+                          <a href="/friend" key={index}><button className="friendCard" data={friend}>{friend}</button></a>
+                        );
+                      })}
+                  </div>
+                ) : (
+                  <h2>Go forth and make friends!</h2>
+                  )}
 
               </div>
           </div>
