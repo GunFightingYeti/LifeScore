@@ -3,8 +3,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/LifeScore"
-);
+  "mongodb://localhost/LifeScore", { useNewUrlParser: true });
 
 const achievementSeed = [
   {
@@ -25,20 +24,7 @@ const playerSeed = [
     score: 12845,
     avatar: "/assets/images/elizabeth.jpg",
     believability: 6258,
-    date: new Date(Date.now())
-  },
-  {
-    name: "Knurtts",
-    score: 10481,
-    avatar: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/28/284ece0b03cdbdb48bd023dfcb743ce54d10cf19_full.jpg",
-    believability: 543,
-    date: new Date(Date.now())
-  },
-  {
-    name: "GunFightingYeti",
-    score: 8354,
-    avatar: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9b/9bf768ca860b792c90f257378b9e77f6f9cdaa17_full.jpg",
-    believability: 314,
+    friends: "GunFightingYeti, Knurtts",
     date: new Date(Date.now())
   },
 ];
