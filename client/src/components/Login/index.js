@@ -7,10 +7,12 @@ function Login(props) {
         <Jumbotron/>
         <div className="container">
 
-          <div className="row">
+          <div className="row justify-content-center">
+
+          <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
             {/* Login */}
-              <div className="col-6">
+              {/* <div className="col-6">
               <h1>Login</h1>
                 <form className="needs-validation" noValidate>
                   <div className="form-group">
@@ -42,13 +44,14 @@ function Login(props) {
 
                   <a href="/" className="login btn btn-success mt-3" id="login">Login</a>
                   </form>
-                </div>
+                </div> */}
+
                 {/* Create New */}
-                <div className="col-6">
+                {/* <div className="col-6">
                   <h1>Create New Profile</h1>
 
                   <a href="/create" className="login btn btn-success mt-3 ml-4" id="login">New Profile</a>
-                  </div>
+                </div> */}
             </div>
         </div>
     </div>
