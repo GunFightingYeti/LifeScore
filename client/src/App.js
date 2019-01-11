@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 // Commpontents
 // import Wrapper from "./components/Wrapper";
@@ -18,17 +18,36 @@ import Footer from './components/Footer';
 
 import './App.css';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-          <Nav/>
-          <Switch>
+class App extends Component {
+  render() {
+    const App = () => (
+      <div>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/friends' component={Friends}/>
+        </Switch>
+      </div>
+    )
+    return (
+      <Switch>
+        <App/>
+      </Switch>
+    );
+  }
+}
+
+
+// function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//           <Nav/>
+//           <Switch>
             {/* <Route exact path="/login" component={Login} />
             <Route exact path="/create" component={Create} />
             <Route exact path="/quiz" component={Quiz} /> */}
-            <Route exact path="/" component={Home} />
-            <Route path="/friends" component={Friends} />
+            // <Route exact path="/" component={Home} />
+            // <Route path="/friends" component={Friends} />
             {/* <Route component={Friends} /> */}
             {/* <Route exact path="/friend" component={Friend} />
             <Route exact path="/player" component={Player} />
@@ -43,11 +62,11 @@ function App() {
 
             <Route exact path="/stats" component={Stats} />
             <Route exact path="/saved" component={Saved} /> */}
-          </Switch>
-          <Footer/>
-      </div>
-    </Router>
-        );
-    }
+    //       </Switch>
+    //       <Footer/>
+    //   </div>
+    // </Router>
+    //     );
+    // }
 
 export default App;
