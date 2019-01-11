@@ -24,16 +24,7 @@ const playerSeed = [
     score: 12845,
     avatar: "/assets/images/elizabeth.jpg",
     believability: 6258,
-    friends:Array,
-    0:"GunFightingYeti",
-    1:"Knurtts",
-    2:"Scarab27",
-    3:"Drizt172",
-    4:"WriterManda",
-    5:"GenZip",
-    6:"Krontime",
-    7:"Gummybearx3",
-    8:"SassyCat",
+    friends: ["GunFightingYeti", "Knurtts", "Scarab27", "Drizt172", "WriterManda", "GenZip", "Krontime", "Gummybearx3", "SassyCat"],
     date: new Date(Date.now())
   },
 ];
@@ -43,7 +34,7 @@ db.Achievement
   .then(() => db.Achievement.collection.insertMany(achievementSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    // process.exit(0);
   })
   .catch(err => {
     console.error(err);
