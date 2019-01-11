@@ -4,6 +4,7 @@ const playerController = require("../../controllers/playerController");
 
 // Matches with "/api/achievement"
 router.route("/achievements")
+  .get(achievementController.findAll)
   .post(achievementController.findAll);
 
   // Matches with "/api/player"
@@ -14,6 +15,9 @@ router.route("/player")
 router
   .route("/:id")
   .get(achievementController.findById)
-  .put(achievementController.update)
+  .put(achievementController.update);
+
+router.route("/friends")
+  .get(playerController.findAll);
 
 module.exports = router;

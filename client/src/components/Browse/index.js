@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 class Browse extends Component {
+  state = {
+    results: []
+  }
 
 render() {
     return (
@@ -16,12 +19,12 @@ render() {
         <div className="row3">
             <div className="col-12">
 
-                <a className="homebtn" href="/browseAll">All</a>
-                <a className="homebtn" href="/browseLife">Life</a>
-                <a className="homebtn" href="/browseFood">Food</a>
-                <a className="homebtn" href="/browseSocial">Social</a>
-                <a className="homebtn" href="/browseTravel">Travel</a>
-                <a className="homebtn" href="/browseViolent">Violent</a>
+                <button className="homebtn" id="/browseAll">All</button>
+                <button className="homebtn" id="/browseLife">Life</button>
+                <button className="homebtn" id="/browseFood">Food</button>
+                <button className="homebtn" id="/browseSocial">Social</button>
+                <button className="homebtn" id="/browseTravel">Travel</button>
+                <button className="homebtn" id="/browseViolent">Violent</button>
                 <a className="homebtn" href="/saved">Saved</a>
 
             </div>

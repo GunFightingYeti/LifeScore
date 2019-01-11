@@ -24,12 +24,12 @@ function App() {
       <div className="App">
           <Nav/>
           <Switch>
-            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/login" component={Login} />
             <Route exact path="/create" component={Create} />
-            <Route exact path="/quiz" component={Quiz} />
+            <Route exact path="/quiz" component={Quiz} /> */}
             <Route exact path="/" component={Home} />
             <Route exact path="/friends" component={Friends} />
-            <Route exact path="/friend" component={Friend} />
+            {/* <Route exact path="/friend" component={Friend} />
             <Route exact path="/player" component={Player} />
             <Route path="/browse" component={Browse} />
 
@@ -41,7 +41,7 @@ function App() {
             <Route path="/browseViolent" component={Browse} />
 
             <Route exact path="/stats" component={Stats} />
-            <Route exact path="/saved" component={Saved} />
+            <Route exact path="/saved" component={Saved} /> */}
           </Switch>
           <Footer/>
       </div>
