@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
 
 // Commpontents
-// import Wrapper from "./components/Wrapper";
+ import Wrapper from "./components/Wrapper";
 import Nav from './components/Nav';
 import Login from './components/Login';
 import Create from './components/Create';
@@ -23,18 +23,16 @@ class App extends Component {
     const App = () => (
       <div>
         <Nav/>
-        <Switch>
+        <Wrapper>
           <Route exact path='/' component={Home}/>
           <Route path='/friends' component={Friends}/>
-        </Switch>
+        </Wrapper>
         <Footer/>
 
       </div>
     )
     return (
-      <Switch>
-        <App/>
-      </Switch>
+      <App/>
     );
   }
 }
