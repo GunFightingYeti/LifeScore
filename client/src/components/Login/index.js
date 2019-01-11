@@ -36,7 +36,7 @@ function Login(props) {
                       <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
                   </div>
 
-                  <a href="/" className="login btn btn-success mt-3" id="login">Login</a>
+                  <a href="/" className="login btn btn-success mt-3 ml-2" id="login">Login</a>
                   </form>
                 </div>
 
@@ -46,7 +46,7 @@ function Login(props) {
 
                   <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
-                  <a href="/create" className="login btn btn-success mt-3 ml-4" id="login">New Profile</a>
+                  <a href="/create" className="login btn btn-success mt-3 ml-5" id="login">New Profile</a>
                 </div>
             </div>
         </div>
