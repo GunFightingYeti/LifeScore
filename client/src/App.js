@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Commpontents
-import Wrapper from "./components/Wrapper";
+// import Wrapper from "./components/Wrapper";
 import Nav from './components/Nav';
 import Login from './components/Login';
 import Create from './components/Create';
@@ -23,7 +23,7 @@ function App() {
     <Router>
       <div className="App">
           <Nav/>
-          <Wrapper>
+          <Switch>
             <Route exact path="/login" component={Login} />
             <Route exact path="/create" component={Create} />
             <Route exact path="/quiz" component={Quiz} />
@@ -42,7 +42,7 @@ function App() {
 
             <Route exact path="/stats" component={Stats} />
             <Route exact path="/saved" component={Saved} />
-          </Wrapper>
+          </Switch>
           <Footer/>
       </div>
     </Router>
