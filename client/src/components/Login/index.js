@@ -9,11 +9,12 @@ function Login(props) {
 
           <div className="row justify-content-center">
 
-          <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-
             {/* Login */}
-              {/* <div className="col-6">
+              <div className="col-6">
               <h1>Login</h1>
+
+              <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+
                 <form className="needs-validation" noValidate>
                   <div className="form-group">
                       <label htmlFor="exampleInputEmail1">Email address</label>
@@ -30,13 +31,6 @@ function Login(props) {
                           Please provide a valid password.
                       </div>
                   </div>
-                  <div className="form-group">
-                      <label htmlFor="confirmPassword">Confirm Password</label>
-                      <input type="password" className="form-control" id="confirmPassword" placeholder="Password" required/>
-                      <div className="invalid-feedback">
-                          Please provide a valid password.
-                      </div>
-                  </div>
                   <div className="form-check">
                       <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
                       <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
@@ -44,14 +38,16 @@ function Login(props) {
 
                   <a href="/" className="login btn btn-success mt-3" id="login">Login</a>
                   </form>
-                </div> */}
+                </div>
 
                 {/* Create New */}
-                {/* <div className="col-6">
+                <div className="col-6">
                   <h1>Create New Profile</h1>
 
+                  <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
                   <a href="/create" className="login btn btn-success mt-3 ml-4" id="login">New Profile</a>
-                </div> */}
+                </div>
             </div>
         </div>
     </div>
