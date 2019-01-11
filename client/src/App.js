@@ -22,10 +22,13 @@ class App extends Component {
   render() {
     const App = () => (
       <div>
+        <Nav/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/friends' component={Friends}/>
         </Switch>
+        <Footer/>
+
       </div>
     )
     return (
