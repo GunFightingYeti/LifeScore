@@ -23,7 +23,9 @@ render() {
                 <button className="homebtn" id="/browseLife">Life</button>
                 <button className="homebtn" id="/browseFood">Food</button>
                 <button className="homebtn" id="/browseSocial">Social</button>
-                <button className="homebtn" id="/browseTravel">Travel</button>
+                <button className="homebtn" id="/browseTravel">Adventure</button>
+                <button className="homebtn" id="/browseSkills">Skills</button>
+                <button className="homebtn" id="/browseEntertainment">Entertainment</button>
                 <button className="homebtn" id="/browseViolent">Violent</button>
                 <a className="homebtn" href="/saved">Saved</a>
 
