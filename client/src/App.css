@@ -173,6 +173,16 @@ button:focus {
   width: 100%;
 }
 
+.latest {
+  color: #a14007;
+  font-size: 1.5rem;
+  border-style: none;
+}
+
+.latest:hover {
+  text-shadow: 1px 1px 2px black;
+}
+
 /* Player */
 .value {
   padding: 5px 10px 5px 0px;

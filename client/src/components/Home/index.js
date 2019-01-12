@@ -46,7 +46,7 @@ class Home extends Component {
         </div>
 
         <div className="row row2">
-        <h3 className="achievement">Latest: {this.state.latest}</h3>
+        <h3>Latest: <span className="latest">{this.state.latest}</span></h3>
         </div>
 
         <div className="row row3">
