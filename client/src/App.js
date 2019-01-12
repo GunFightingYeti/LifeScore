@@ -44,7 +44,7 @@ class App extends Component {
             <Route exact path="/stats" component={Stats} />
             <Route exact path="/saved" component={Saved} />
 
-            <Route component={NoMatch} />
+            {/* <Route component={NoMatch} /> */}
             
         </Wrapper>
         <Footer/>
