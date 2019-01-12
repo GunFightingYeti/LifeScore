@@ -52,7 +52,6 @@ class Player extends Component {
                   <h1 className="playerName">{this.state.userName}</h1>
                   <h1>Score: {this.state.score}</h1>
                   <h1>Believability: {this.state.believability}</h1>
-
               </div>
           </div>
 
