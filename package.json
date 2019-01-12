@@ -1,7 +1,7 @@
 {
   "name": "lifescore",
   "version": "1.0.0",
-  "description": "",
+  "description": "Get credit for your achievements in life",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -14,7 +14,7 @@
     "heroku-postbuild": "npm run build"
   },
   "homepage" : "https://lifescore1.herokuapp.com",
-  "author": "",
+  "author": "Tim Lewis",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
