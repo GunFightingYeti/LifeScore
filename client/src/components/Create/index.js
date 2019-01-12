@@ -39,7 +39,7 @@ function Create(props) {
                     </div>
                 </div>
 
-                <a href="/quiz" className="login btn btn-success mt-3" id="login">Create</a>
+                <a href="/" className="login btn btn-success mt-3" id="login">Create</a>
             </form>
         </div>
     </div>
