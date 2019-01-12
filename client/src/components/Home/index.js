@@ -3,8 +3,8 @@ import API from "../../utils/API";
 
 class Home extends Component {
   state = {
-    userName: "",
-    avatar: "",
+    userName: "User Name",
+    avatar: "/assets/images/placeholder.jpg",
     score: 0,
     believability: 0,
     latest: [],

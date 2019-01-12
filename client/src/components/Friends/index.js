@@ -34,7 +34,6 @@ class Friends extends Component {
 
                 {this.state.friends.length ? (
                   <div>
-                    {/* <a href={"/friend/" + friend._id}> */}
                       {this.state.friends.map((friend, index) => {
                         return (
                           <a href="/friend" key={index}><button className="friendCard" data={friend}>{friend}</button></a>

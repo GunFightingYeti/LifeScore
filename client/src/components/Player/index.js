@@ -4,12 +4,12 @@ import API from "../../utils/API";
 class Player extends Component {
 
   state = {
-    userName: "",
-    avatar: "",
+    userName: "User Name",
+    avatar: "/assets/images/placeholder.jpg",
     score: 0,
     believability: 0,
-    latest: [],
-    achievements: []
+    latest: "",
+    achievements: ["Get Born!", "Cheers!", ""]
   }
 
   loadAchievements = () =>{
@@ -23,7 +23,7 @@ class Player extends Component {
   loadPlayer = () =>{
     API.getPlayer()
     .then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState({userName: res.data[0].name, score: res.data[0].score, avatar: res.data[0].avatar, believability: res.data[0].believability}); })
     .catch(err => console.log(err))
   }
@@ -61,11 +61,21 @@ class Player extends Component {
           </div>
 
           <div className="row row2">
-              <ul>
-                <li className="achievement">Cut ties with all the lies you've been living in</li>
-                <li className="achievement">Eat a 1,000,000+ scoville pepper</li>
-                <li className="achievement">Break a brick with your hand (without breaking your hand)</li>
-              </ul>
+
+          <h3 className="block">All Achieved:</h3>
+
+          {this.state.achievements.length ? (
+            <div>
+                {this.state.achievements.map((chieves, index) => {
+                  return (
+                    <button  key={index}className="achievement" data={chieves}>{chieves}</button>
+                  );
+                })}
+            </div>
+          ) : (
+            <h2>Seize the day!</h2>
+          )}
+
           </div>
 
       </div>
