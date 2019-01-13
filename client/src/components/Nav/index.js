@@ -24,7 +24,9 @@ function Nav(props) {
                     <a className="dropdown-item font" href="/browseLife">Life</a>
                     <a className="dropdown-item font" href="/browseFood">Food</a>
                     <a className="dropdown-item font" href="/browseSocial">Social</a>
-                    <a className="dropdown-item font" href="/browseTravel">Travel</a>
+                    <a className="dropdown-item font" href="/browseAdventure">Adventure</a>
+                    <a className="dropdown-item font" href="/browseSkills">Skills</a>
+                    <a className="dropdown-item font" href="/browseFun">Fun</a>
                     <a className="dropdown-item font" href="/browseViolent">Violent</a>
                     <a className="dropdown-item font" href="/saved">Saved</a>
                     </div>

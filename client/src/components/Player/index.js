@@ -9,15 +9,16 @@ class Player extends Component {
     score: 0,
     believability: 0,
     latest: "",
-    achievements: ["Get Born!", "Cheers!", ""]
+    achievements: []
   }
 
   loadAchievements = () =>{
     API.getAchievements()
     .then(res => {
-      console.log(res);
-      this.setState({latest: res.data[0].name}); })
-    .catch(err => console.log(err))
+    //   console.log(res);
+    //   this.setState({achievements: res.data[1].name})
+    // .catch(err => console.log(err))
+    });
   }
 
   loadPlayer = () =>{
