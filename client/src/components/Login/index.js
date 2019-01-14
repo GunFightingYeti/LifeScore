@@ -10,12 +10,12 @@ function Login(props) {
           <div className="row justify-content-center">
 
             {/* Login */}
-              <div className="col-6">
-              <h1>Login</h1>
+              <div className="col-12">
+              <h1 className="mb-4">Login</h1>
 
-              <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+              <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
 
-                <form className="needs-validation" noValidate>
+                {/* <form className="needs-validation" noValidate>
                   <div className="form-group">
                       <label htmlFor="exampleInputEmail1">Email address</label>
                       <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required/>
@@ -37,17 +37,17 @@ function Login(props) {
                   </div>
 
                   <a href="/" className="login btn btn-success mt-3 ml-2" id="login">Login</a>
-                  </form>
+                  </form> */}
                 </div>
 
                 {/* Create New */}
-                <div className="col-6">
-                  <h1>Create New Profile</h1>
+                {/* <div className="col-6">
+                  <h1 className="mb-4">Create New Profile</h1>
 
-                  <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                  <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div> */}
 
-                  <a href="/create" className="login btn btn-success mt-3 ml-5" id="login">New Profile</a>
-                </div>
+                  {/* <a href="/create" className="login btn btn-success mt-3 ml-5" id="login">New Profile</a> */}
+                {/* </div> */}
             </div>
         </div>
     </div>
