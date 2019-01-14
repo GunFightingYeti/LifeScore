@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 
 // Commpontents
- import Wrapper from "./components/Wrapper";
+import Wrapper from "./components/Wrapper";
 import Nav from './components/Nav';
 import Login from './components/Login';
 import Create from './components/Create';
@@ -16,7 +16,6 @@ import Browse from './components/Browse';
 import Stats from './components/Stats';
 import Saved from './components/Saved';
 import Footer from './components/Footer';
-// import NoMatch from './components/NoMatch';
 
 import './App.css';
 
@@ -45,8 +44,6 @@ class App extends Component {
             <Route exact path="/stats" component={Stats} />
             <Route exact path="/saved" component={Saved} />
 
-            {/* <Route component={NoMatch} /> */}
-            
         </Wrapper>
         <Footer/>
 
