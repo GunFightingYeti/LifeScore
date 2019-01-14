@@ -10,7 +10,7 @@ function Login(props) {
           <div className="row justify-content-center">
 
             {/* Login */}
-              <div className="col-12">
+              <div className="col-12 justify-content-center">
               <h1 className="mb-4">Login</h1>
 
               <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
