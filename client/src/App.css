@@ -129,6 +129,7 @@ body {
   display: block;
   font-size: 1.5rem;
   border-style: none;
+  margin: 5px;
 }
 
 .achievement:hover {
@@ -137,6 +138,13 @@ body {
 
 .row3 {
   text-align: center;
+}
+
+#results {
+  padding-top: 12px;
+  border-top: #282c34;
+  border-top-style: solid;
+  border-top-width: 3px;
 }
 
 .homebtn {

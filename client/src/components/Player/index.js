@@ -4,20 +4,20 @@ import API from "../../utils/API";
 class Player extends Component {
 
   state = {
+    achievements: [],
     userName: "User Name",
     avatar: "/assets/images/placeholder.jpg",
     score: 0,
     believability: 0,
     latest: "",
-    achievements: []
   }
 
   loadAchievements = () =>{
-    API.getAchievements()
+    API.getAllChieves()
     .then(res => {
-    //   console.log(res);
-    //   this.setState({achievements: res.data[1].name})
-    // .catch(err => console.log(err))
+      console.log(res);
+      this.setState({achievements: res.data})
+    .catch(err => console.log(err))
     });
   }
 
@@ -30,8 +30,8 @@ class Player extends Component {
   }
   
   componentDidMount() {
-    this.loadPlayer();
     this.loadAchievements();
+    this.loadPlayer();
   }
 
   render () {

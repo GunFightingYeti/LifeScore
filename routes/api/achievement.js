@@ -6,6 +6,10 @@ const playerController = require("../../controllers/playerController");
 router.route("/achievements")
   .get(achievementController.findAll)
   .post(achievementController.findAll);
+  
+router.route("/achievements")
+  .get(achievementController.findAll)
+  .post(achievementController.findAll);
 
   // Matches with "/api/player"
 router.route("/player")

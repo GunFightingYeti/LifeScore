@@ -2,7 +2,11 @@ import axios from "axios";
 
 export default {
   // Gets all achievements
-  getAchievements: function() {
+  getAllChieves: function() {
+    return axios.post("/api/achievements");
+  },
+  //Get one category
+  getOneCategory: function() {
     return axios.post("/api/achievements");
   },
   getPlayer: function() {

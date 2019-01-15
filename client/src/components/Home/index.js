@@ -12,7 +12,7 @@ class Home extends Component {
   }
 
   loadAchievements = () =>{
-    API.getAchievements()
+    API.getAllChieves()
     .then(res => {
       this.setState({latest: res.data[0].name}); })
     .catch(err => console.log(err))
