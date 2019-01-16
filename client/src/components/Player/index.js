@@ -17,7 +17,7 @@ class Player extends Component {
     .then(res => {
       console.log(res);
       this.setState({achievements: res.data})
-    .catch(err => console.log(err))
+    // .catch(err => console.log(err))
     });
   }
 
@@ -51,7 +51,7 @@ class Player extends Component {
               </div>
               <div className="playerInfo justify-content-start">
                   <h1 className="playerName">{this.state.userName}</h1>
-                  <h1>Score: {this.state.score}</h1>
+                  <h1>Score: {this.state.score} P</h1>
                   <h1>Believability: {this.state.believability}</h1>
               </div>
           </div>
@@ -65,13 +65,13 @@ class Player extends Component {
           <h3 className="block">All Achieved:</h3>
 
           {this.state.achievements.length ? (
-            <div>
-                {this.state.achievements.map((chieves, index) => {
-                  return (
-                    <button  key={index}className="achievement" data={chieves}>{chieves}</button>
-                  );
-                })}
-            </div>
+              <div>
+                  {this.state.achievements.map((chieves, index) => {
+                    return (
+                      <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
+                    );
+                  })}
+              </div>
           ) : (
             <h2>Seize the day!</h2>
           )}

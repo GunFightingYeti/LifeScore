@@ -6,9 +6,9 @@ export default {
     return axios.post("/api/achievements");
   },
   //Get one category
-  getOneCategory: function() {
-    return axios.post("/api/achievements");
-  },
+  // getOneCategory: function() {
+  //   return axios.post("/api/achievements");
+  // },
   getPlayer: function() {
     return axios.post("/api/player");
   },

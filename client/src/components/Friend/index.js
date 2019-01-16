@@ -7,15 +7,15 @@ class Friend extends Component {
     avatar: "/assets/images/placeholder.jpg",
     score: 0,
     believability: 0,
-    latest: "",
-    achievements: ["Get Born!", "Cheers!", ""]
+    latest: [],
+    achievements: []
   }
 
   loadAchievements = () =>{
-    API.getAchievements()
+    API.getAllChieves()
     .then(res => {
       console.log(res);
-      this.setState({latest: res.data[0].name}); })
+      this.setState({latest: res.data[4], achievements: res.data}); })
     .catch(err => console.log(err))
   }
 
@@ -50,18 +50,18 @@ class Friend extends Component {
 
           <div className="row row2">
           <h3>Last achievement: </h3>
-          <h3 className="achievement">Dance if you wanna</h3>
+          <h3 className="achievement">{this.state.latest.name} - {this.state.latest.description} - {this.state.latest.worth} P</h3>
           </div>
 
           <div className="row row2">
 
-          <h3 className="block">All Achievements:</h3>
+          <h3 className="block">All Achieved:</h3>
 
           {this.state.achievements.length ? (
             <div>
                 {this.state.achievements.map((chieves, index) => {
                   return (
-                    <button  key={index}className="achievement" data={chieves}>{chieves}</button>
+                    <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
                   );
                 })}
             </div>

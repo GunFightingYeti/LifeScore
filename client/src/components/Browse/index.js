@@ -8,18 +8,17 @@ class Browse extends Component {
     category: "",
   }
 
-  getAll = () =>{
-    API.getAllChieves()
+  getAll = category => e => {
+    API.getAllChieves(category)
     .then(res => {
       console.log(res);
-      this.setState({results: res.data})
+      this.setState({results: res.data, category: category})
       // .catch(err => console.log(err))
     });
   }
 
   getOne = category => e => {
-    console.log(category);
-    API.getOne(category)
+    API.getOneCategory(category)
     .then(res => {
       console.log(res);
       this.setState({results: res.data, category: category})
@@ -41,15 +40,15 @@ render() {
         <div className="row3">
             <div className="col-12">
 
-                <button className="homebtn" data-type="All" onClick={this.getAll}>All</button>
-                <button className="homebtn" data-type="Life" onClick={this.getOne("Life")}>Life</button>
-                <button className="homebtn" data-type="Food" onClick={this.getOne("Food")}>Food</button>
-                <button className="homebtn" data-type="Social" onClick={this.getOne("Social")}>Social</button>
-                <button className="homebtn" data-type="Adventure" onClick={this.getOne("Adventure")}>Adventure</button>
-                <button className="homebtn" data-type="Skils" onClick={this.getOne("Skills")}>Skills</button>
-                <button className="homebtn" data-type="Fun" onClick={this.getOne("Fun")}>Fun</button>
-                <button className="homebtn" data-type="Violent" onClick={this.getOne("Violent")}>Violent</button>
-                <button className="homebtn" data-type="Saved" onClick={this.getOne("Saved")}>Saved</button>
+                <button className="homebtn" onClick={this.getAll("All")}>All</button>
+                <button className="homebtn" onClick={this.getOne("Life")}>Life</button>
+                <button className="homebtn" onClick={this.getOne("Food")}>Food</button>
+                <button className="homebtn" onClick={this.getOne("Social")}>Social</button>
+                <button className="homebtn" onClick={this.getOne("Adventure")}>Adventure</button>
+                <button className="homebtn" onClick={this.getOne("Skills")}>Skills</button>
+                <button className="homebtn" onClick={this.getOne("Fun")}>Fun</button>
+                <button className="homebtn" onClick={this.getOne("Violent")}>Violent</button>
+                <button className="homebtn" onClick={this.getOne("Saved")}>Saved</button>
 
             </div>
         </div>
@@ -63,7 +62,7 @@ render() {
               <div>
                   {this.state.results.map((chieves, index) => {
                     return (
-                      <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} points</button>
+                      <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
                     );
                   })}
               </div>

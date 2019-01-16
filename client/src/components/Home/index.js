@@ -40,7 +40,7 @@ class Home extends Component {
             </div>
             <div className="playerInfo justify-content-start">
                 <h1>{this.state.userName}</h1>
-                <h1>Score: {this.state.score}</h1>
+                <h1>Score: {this.state.score} P</h1>
                 <h1>Believability: {this.state.believability}</h1>
             </div>
         </div>
