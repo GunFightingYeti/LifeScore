@@ -11,7 +11,7 @@ class Browse extends Component {
   getAll = category => e => {
     API.getAllChieves(category)
     .then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState({results: res.data, category: category})
       // .catch(err => console.log(err))
     });
@@ -20,8 +20,17 @@ class Browse extends Component {
   getOne = category => e => {
     API.getOneCategory(category)
     .then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState({results: res.data, category: category})
+      // .catch(err => console.log(err))
+    });
+  }
+
+  getSaved = Saved => e => {
+    API.getSaved()
+    .then(res => {
+      console.log(res);
+      this.setState({results: res.data, category: Saved})
       // .catch(err => console.log(err))
     });
   }
@@ -48,7 +57,7 @@ render() {
                 <button className="homebtn" onClick={this.getOne("Skills")}>Skills</button>
                 <button className="homebtn" onClick={this.getOne("Fun")}>Fun</button>
                 <button className="homebtn" onClick={this.getOne("Violent")}>Violent</button>
-                <button className="homebtn" onClick={this.getOne("Saved")}>Saved</button>
+                <button className="homebtn" onClick={this.getSaved("Saved")}>Saved</button>
 
             </div>
         </div>

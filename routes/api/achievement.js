@@ -17,6 +17,16 @@ router
   .get(achievementController.findById)
   .put(achievementController.update);
 
+router
+  .route("/achievements/:category")
+  .get(achievementController.findByCategory)
+  .put(achievementController.update);
+
+router
+  .route("/achievements/saved")
+  .get(achievementController.findBySaved)
+  .put(achievementController.update);
+
 router.route("/friends")
   .get(playerController.findAll);
 

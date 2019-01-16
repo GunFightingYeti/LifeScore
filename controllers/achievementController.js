@@ -4,7 +4,7 @@ module.exports = {
   findAll: function(req, res) {
     db.Achievement
       .find(req.query)
-      .sort({ date: -1 })
+      .sort({ date: 1 })
       .then(dbModel => {
         res.json(dbModel); })
       .catch(err => res.status(422).json(err));
@@ -12,6 +12,18 @@ module.exports = {
   findById: function(req, res) {
     db.Achievement
       .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByCategory: function(req, res) {
+    db.Achievement
+      .find({category: req.params.category})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findBySaved: function(req, res) {
+    db.Achievement
+      .find({saved: true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

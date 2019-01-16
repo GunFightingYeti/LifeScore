@@ -5,10 +5,14 @@ export default {
   getAllChieves: function() {
     return axios.post("/api/achievements");
   },
-  //Get one category
-  // getOneCategory: function() {
-  //   return axios.post("/api/achievements");
-  // },
+  // Get one category
+  getOneCategory: function(category) {
+    return axios.get("/api/achievements/" + category);
+  },
+  // Get saved
+  getSaved: function() {
+    return axios.post("/api/achievements/saved");
+  },
   getPlayer: function() {
     return axios.post("/api/player");
   },

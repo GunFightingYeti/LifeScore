@@ -142,9 +142,10 @@ body {
 
 #results {
   padding-top: 12px;
-  border-top: #282c34;
-  border-top-style: solid;
-  border-top-width: 3px;
+  border: #282c34;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50px;
 }
 
 .homebtn {
