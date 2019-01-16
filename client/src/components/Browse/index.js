@@ -6,6 +6,7 @@ class Browse extends Component {
   state = {
     results: [],
     category: "",
+    
   }
 
   getAll = category => e => {
@@ -17,20 +18,29 @@ class Browse extends Component {
     });
   }
 
-  getOne = category => e => {
+  getOneCategory = category => e => {
     API.getOneCategory(category)
     .then(res => {
-      // console.log(res);
+      console.log(res);
       this.setState({results: res.data, category: category})
       // .catch(err => console.log(err))
     });
   }
 
-  getSaved = Saved => e => {
+  getSaved = saved => e => {
     API.getSaved()
     .then(res => {
       console.log(res);
-      this.setState({results: res.data, category: Saved})
+      this.setState({results: res.data, category: saved})
+      // .catch(err => console.log(err))
+    });
+  }
+
+  SaveChieve = id => e => {
+    API.getSaved()
+    .then(res => {
+      console.log(res);
+      this.setState({results: res.data})
       // .catch(err => console.log(err))
     });
   }
@@ -50,13 +60,13 @@ render() {
             <div className="col-12">
 
                 <button className="homebtn" onClick={this.getAll("All")}>All</button>
-                <button className="homebtn" onClick={this.getOne("Life")}>Life</button>
-                <button className="homebtn" onClick={this.getOne("Food")}>Food</button>
-                <button className="homebtn" onClick={this.getOne("Social")}>Social</button>
-                <button className="homebtn" onClick={this.getOne("Adventure")}>Adventure</button>
-                <button className="homebtn" onClick={this.getOne("Skills")}>Skills</button>
-                <button className="homebtn" onClick={this.getOne("Fun")}>Fun</button>
-                <button className="homebtn" onClick={this.getOne("Violent")}>Violent</button>
+                <button className="homebtn" onClick={this.getOneCategory("Life")}>Life</button>
+                <button className="homebtn" onClick={this.getOneCategory("Food")}>Food</button>
+                <button className="homebtn" onClick={this.getOneCategory("Social")}>Social</button>
+                <button className="homebtn" onClick={this.getOneCategory("Adventure")}>Adventure</button>
+                <button className="homebtn" onClick={this.getOneCategory("Skills")}>Skills</button>
+                <button className="homebtn" onClick={this.getOneCategory("Fun")}>Fun</button>
+                <button className="homebtn" onClick={this.getOneCategory("Violent")}>Violent</button>
                 <button className="homebtn" onClick={this.getSaved("Saved")}>Saved</button>
 
             </div>
@@ -71,7 +81,9 @@ render() {
               <div>
                   {this.state.results.map((chieves, index) => {
                     return (
-                      <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
+                      <div>
+                      <button data-id={chieves._id} key={index} className="savebtn float-left">Save</button> <button className="achievement" key={chieves._id} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
+                      </div>
                     );
                   })}
               </div>

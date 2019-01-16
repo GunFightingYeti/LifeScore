@@ -168,6 +168,21 @@ body {
   background-color: #005000;
 }
 
+.savebtn {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: rgba(47, 79, 79, 0.85);
+}
+
+.savebtn:hover {
+  text-decoration: none;
+  color: black;
+  background-color: darkslategray;
+}
+
 button {
   background: #a1400700;
 }

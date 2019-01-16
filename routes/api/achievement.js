@@ -2,31 +2,34 @@ const router = require("express").Router();
 const achievementController = require("../../controllers/achievementController");
 const playerController = require("../../controllers/playerController");
 
-// Matches with "/api/achievement"
+// "/api/achievement"
 router.route("/achievements")
   .get(achievementController.findAll)
   .post(achievementController.findAll);
 
-  // Matches with "/api/player"
+// "/api/player"
 router.route("/player")
   .post(playerController.findAll);
 
-// Matches with "/api/achievement/:id"
+// "/api/achievements/:id"
 router
   .route("/:id")
   .get(achievementController.findById)
   .put(achievementController.update);
 
+// "/api/achievements/:category"
 router
   .route("/achievements/:category")
   .get(achievementController.findByCategory)
   .put(achievementController.update);
 
+// "/api/achievements/saved"
 router
   .route("/achievements/saved")
-  .get(achievementController.findBySaved)
+  .post(achievementController.findBySaved)
   .put(achievementController.update);
 
+// "/api/friends
 router.route("/friends")
   .get(playerController.findAll);
 

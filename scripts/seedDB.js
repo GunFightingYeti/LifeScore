@@ -1086,7 +1086,7 @@ const achievementSeed = [
     date: new Date(Date.now())
   }, {
     name: "SANTA!!!",
-    description: "Have a snowball fight",
+    description: "Have an epic snowball fight",
     category: "Fun",
     worth: 5,
     passed: false,
@@ -1221,7 +1221,6 @@ db.Achievement
   .then(() => db.Achievement.collection.insertMany(achievementSeed))
   .then(data => {
       console.log(data.result.n + " records inserted!");
-      // process.exit(0);
   })
   .catch(err => {
       console.error(err);
