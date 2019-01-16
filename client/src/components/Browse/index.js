@@ -6,7 +6,6 @@ class Browse extends Component {
   state = {
     results: [],
     category: "",
-    
   }
 
   getAll = category => e => {
@@ -21,7 +20,7 @@ class Browse extends Component {
   getOneCategory = category => e => {
     API.getOneCategory(category)
     .then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState({results: res.data, category: category})
       // .catch(err => console.log(err))
     });
@@ -30,17 +29,17 @@ class Browse extends Component {
   getSaved = saved => e => {
     API.getSaved()
     .then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState({results: res.data, category: saved})
       // .catch(err => console.log(err))
     });
   }
 
-  SaveChieve = id => e => {
-    API.getSaved()
+  saveChieve = id => e => {
+    console.log(id);
+    API.saveChieve(id)
     .then(res => {
-      console.log(res);
-      this.setState({results: res.data})
+      // console.log(res);
       // .catch(err => console.log(err))
     });
   }
@@ -81,8 +80,8 @@ render() {
               <div>
                   {this.state.results.map((chieves, index) => {
                     return (
-                      <div>
-                      <button data-id={chieves._id} key={index} className="savebtn float-left">Save</button> <button className="achievement" key={chieves._id} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
+                      <div key={index}>
+                      <button className="savebtn float-left" onClick={this.saveChieve(chieves._id)} data-id={chieves._id}>Save</button> <button className="achievement">{chieves.name} - {chieves.description} = {chieves.worth} P</button>
                       </div>
                     );
                   })}

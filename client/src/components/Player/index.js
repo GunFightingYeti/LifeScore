@@ -12,12 +12,13 @@ class Player extends Component {
     latest: "",
   }
 
-  loadAchievements = () =>{
-    API.getAllChieves()
+ 
+loadPassed = () => {
+    API.getPassed()
     .then(res => {
       console.log(res);
       this.setState({achievements: res.data})
-    // .catch(err => console.log(err))
+      // .catch(err => console.log(err))
     });
   }
 
@@ -30,7 +31,7 @@ class Player extends Component {
   }
   
   componentDidMount() {
-    this.loadAchievements();
+    this.loadPassed();
     this.loadPlayer();
   }
 

@@ -13,6 +13,13 @@ export default {
   getSaved: function() {
     return axios.post("/api/achievements/saved");
   },
+  // Get saved
+  saveChieve: function(id) {
+    return axios.put("/api/achievements/save/" + id);
+  },
+  getPassed: function() {
+    return axios.get("/api/achievements/passed");
+  },
   getPlayer: function() {
     return axios.post("/api/player");
   },

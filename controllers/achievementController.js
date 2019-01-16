@@ -27,6 +27,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findAllPassed: function(req, res) {
+    db.Achievement
+      .find({passed: true})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Achievement
       .create(req.body)
@@ -36,6 +42,12 @@ module.exports = {
   update: function(req, res) {
     db.Achievement
       .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateSaved: function(req, res) {
+    db.Achievement
+      .findOneAndUpdate({ _id: req.params.id }, {$set:{saved: true}})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
