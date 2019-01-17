@@ -12,7 +12,9 @@ function Footer(props) {
                         className="mx-2">
                         <i className="fab fa-github"></i> Lewis Github</a> */}
 
-                    <span className="float-center"><i className="far fa-copyright"></i> Tim Lewis 2018</span>
+                    <a href="/"><span className="float-left white-text"><i className="fas fa-unlock-alt"></i></span></a>
+                    <a href="https://github.com/GunFightingYeti/LifeScore" target="_blank" rel="noopener noreferrer" className="white-text"><span className="float-center"><i className="far fa-copyright"></i> Tim Lewis 2018</span></a>
+                    <a href="https://termsfeed.com/privacy-policy/d7476db7770074eabb5e98ee202c62ae" target="_blank" rel="noopener noreferrer" className="white-text"><span className="float-right">Privacy Policy</span></a>
                 </div>
 
             </div>

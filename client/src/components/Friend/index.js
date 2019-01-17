@@ -23,7 +23,7 @@ class Friend extends Component {
   loadPlayer = () =>{
     API.getPlayer()
     .then(res => {
-      this.setState({userName: res.data[0].name, score: res.data[0].score, avatar: res.data[0].avatar, believability: res.data[0].believability}); })
+      this.setState({userName: res.data[1].name, score: res.data[1].score, avatar: res.data[1].avatar, believability: res.data[1].believability}); })
     .catch(err => console.log(err))
   }
   

@@ -51,6 +51,10 @@ body {
   color: white !important;
 }
 
+.nav-link:hover {
+color: #282c34;
+}
+
 .bg-dark {
   background: linear-gradient(to right, #271003 40%, #a14007 117%);
   border-bottom: black;
@@ -253,4 +257,8 @@ footer {
   width: 100%;
   color: white;
   text-align: center;
+}
+
+.white-text {
+  color: white;
 }
