@@ -14,7 +14,7 @@ export default {
     return axios.post("/api/achievements/saved");
   },
   getPassed: function() {
-    return axios.get("/api/achievements/passed");
+    return axios.post("/api/achievements/passed");
   },
   getPlayer: function() {
     return axios.post("/api/player");

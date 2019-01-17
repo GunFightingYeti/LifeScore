@@ -6,6 +6,7 @@ class Browse extends Component {
   state = {
     results: [],
     category: "",
+    modal: "",
   }
 
   getAll = category => e => {
@@ -44,6 +45,16 @@ class Browse extends Component {
     });
   }
 
+  openCard = id => e => {
+    console.log(id);
+    // API.saveChieve(id)
+    // .then(res => {
+    //   // console.log(res);
+    this.setState({modal: "Open"})
+    //   // .catch(err => console.log(err))
+    // });
+  }
+
 render() {
     return (
     <div className="container">
@@ -72,7 +83,7 @@ render() {
         </div>
 
         <div className="row3">
-            <div className="col-12 results">
+            <div className="col-12 results p-3">
 
             <h1>{this.state.category}</h1>
 
@@ -81,7 +92,16 @@ render() {
                   {this.state.results.map((chieves, index) => {
                     return (
                       <div key={index}>
-                      <button className="savebtn float-left" onClick={this.saveChieve(chieves._id)} data-id={chieves._id}>Save</button> <button className="achievement">{chieves.name} - {chieves.description} = {chieves.worth} P</button>
+                      {/* Save button */}
+                      {/* <button className="savebtn float-left" onClick={this.saveChieve(chieves._id)} data-id={chieves._id}>Save</button>  */}
+
+                      <button className="savebtn float-left" onClick={this.openCard(chieves._id)} data-id={chieves._id}>View</button> 
+                      
+                      {/* Full achievement */}
+                      <button className="achievement">{chieves.name} - {chieves.description} = {chieves.worth} S</button>
+
+                      {/* Title only */}
+                      {/* <button className="achievement">{chieves.name}</button> */}
                       </div>
                     );
                   })}

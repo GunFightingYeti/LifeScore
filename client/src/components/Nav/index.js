@@ -20,20 +20,8 @@ class Nav extends Component {
               <li className="nav-item active ml-2">
                   <a className="nav-link font" href="/"><i className="fas fa-home"></i> Home</a>
               </li>
-              <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle font ml-2" id="navbarDropdownMenuLink" href="/browse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-journal-whills"></i> Browse</a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a className="dropdown-item font" href="/browse">Categories</a>
-                  <a className="dropdown-item font" href="/browseAll">All</a>
-                  <a className="dropdown-item font" href="/browseLife">Life</a>
-                  <a className="dropdown-item font" href="/browseFood">Food</a>
-                  <a className="dropdown-item font" href="/browseSocial">Social</a>
-                  <a className="dropdown-item font" href="/browseAdventure">Adventure</a>
-                  <a className="dropdown-item font" href="/browseSkills">Skills</a>
-                  <a className="dropdown-item font" href="/browseFun">Fun</a>
-                  <a className="dropdown-item font" href="/browseViolent">Violent</a>
-                  <a className="dropdown-item font" href="/saved">Saved</a>
-                  </div>
+              <li className="nav-item">
+              <a className="nav-link font ml-2" href="/browse"><i className="fas fa-journal-whills"></i> Browse</a>
               </li>
               <li className="nav-item">
                   <a className="nav-link font ml-2" href="/friends"><i className="fas fa-user-friends"></i> Friends</a>

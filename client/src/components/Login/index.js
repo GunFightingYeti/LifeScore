@@ -10,46 +10,23 @@ function Login(props) {
           <div className="row justify-content-center">
 
             {/* Login */}
-              <div className="col-12 justify-content-center">
+            <div className="col-12 justify-content-center">
               <h1 className="mb-4">Login</h1>
 
               <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
 
-                {/* <form className="needs-validation" noValidate>
-                  <div className="form-group">
-                      <label htmlFor="exampleInputEmail1">Email address</label>
-                      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required/>
-                      <small id="emailHelp" className="form-text text-muted ml-1">We'll never share your email with anyone else.</small>
-                      <div className="invalid-feedback">
-                          Please provide a valid Email address.
-                      </div>
-                  </div>
-                  <div className="form-group">
-                      <label htmlFor="Password">Password</label>
-                      <input type="password" className="form-control" id="Password" placeholder="Password" required/>
-                      <div className="invalid-feedback">
-                          Please provide a valid password.
-                      </div>
-                  </div>
-                  <div className="form-check">
-                      <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                      <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
-                  </div>
+              <div className="results p-4 mt-5">
+                <h1 className="my-4">How do I play this game?</h1>
+                <h4>1. Make a profile and login</h4>
+                <h4>2. Browse for an achievement that looks like fun or that you have already completed</h4>
+                <h4>3. Go do awesome things and get proof</h4>
+                <h4>4. Upload the proof of your achievements and let your friends confirm your awesomeness!</h4>
+                <h4>5. Feel like you've achieved more in life</h4>
+              </div>
 
-                  <a href="/" className="login btn btn-success mt-3 ml-2" id="login">Login</a>
-                  </form> */}
-                </div>
-
-                {/* Create New */}
-                {/* <div className="col-6">
-                  <h1 className="mb-4">Create New Profile</h1>
-
-                  <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div> */}
-
-                  {/* <a href="/create" className="login btn btn-success mt-3 ml-5" id="login">New Profile</a> */}
-                {/* </div> */}
             </div>
-        </div>
+          </div>
+      </div>
     </div>
     );  
 }

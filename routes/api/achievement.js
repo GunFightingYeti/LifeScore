@@ -9,19 +9,16 @@ router.route("/achievements")
 router.route("/player")
   .post(playerController.findAll);
 
-router.route("/achievements/passed")
-  .get(achievementController.findAllPassed);
-
-router
-  .route("/achievements/:category")
+router.route("/achievements/:category")
   .get(achievementController.findByCategory);
 
-router
-  .route("/achievements/saved")
+router.route("/achievements/passed")
+  .post(achievementController.findAllPassed);
+
+router.route("/achievements/saved")
   .post(achievementController.findBySaved);
 
-router
-  .route("/achievements/save/:id")
+router.route("/achievements/save/:id")
   .put(achievementController.updateSaved);
 
 router.route("/friends")
