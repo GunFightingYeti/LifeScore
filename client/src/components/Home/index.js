@@ -3,31 +3,33 @@ import API from "../../utils/API";
 
 class Home extends Component {
   state = {
-    userName: "User Name",
+    Username: "Username",
     avatar: "/assets/images/placeholder.jpg",
     score: 0,
     believability: 0,
     latest: [],
-    achievements: []
+    results: []
   }
 
-  loadAchievements = () =>{
-    API.getAllChieves()
+  loadPassed = () => {
+    API.getPassed()
     .then(res => {
-      this.setState({latest: res.data[0].name}); })
-    .catch(err => console.log(err))
+      console.log(res);
+      this.setState({results: res.data, latest: res.data[0]})
+      // .catch(err => console.log(err))
+    });
   }
 
   loadPlayer = () =>{
     API.getPlayer()
     .then(res => {
-      this.setState({userName: res.data[0].name, score: res.data[0].score, avatar: res.data[0].avatar, believability: res.data[0].believability}); })
+      this.setState({Username: res.data[0].name, score: res.data[0].score, avatar: res.data[0].avatar, believability: res.data[0].believability}); })
     .catch(err => console.log(err))
   }
   
   componentDidMount() {
     this.loadPlayer();
-    this.loadAchievements();
+    this.loadPassed();
   }
 
   render () {
@@ -39,14 +41,15 @@ class Home extends Component {
                 <a href="/player"><img className="avatar" src={this.state.avatar} alt="Player Avatar"/></a>
             </div>
             <div className="playerInfo justify-content-start">
-                <h1>{this.state.userName}</h1>
+                <h1>{this.state.Username}</h1>
                 <h1>Score: {this.state.score}</h1>
                 <h1>Believability: {this.state.believability}</h1>
             </div>
         </div>
 
         <div className="row row2">
-        <h3>Latest: <span className="latest">{this.state.latest}</span></h3>
+        <h3>Last achievement: </h3>
+        <h3 className="achievement">{this.state.latest.name} - {this.state.latest.description} = {this.state.latest.worth} S</h3>
         </div>
 
         <div className="row row3">

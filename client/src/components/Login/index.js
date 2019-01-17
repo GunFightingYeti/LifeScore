@@ -17,8 +17,9 @@ function Login(props) {
 
               <div className="results p-4 mt-5">
                 <h1 className="my-4">How do I play this game?</h1>
-                <h4>1. Make a profile and login</h4>
-                <h4>2. Browse for an achievement that looks like fun or that you have already completed</h4>
+                <h4>1. Login</h4>
+                <h4>2. Browse for an achievement that looks fun</h4>
+                <h4 className="my-4">(Some achievements are for entertainment only and should not be attempted)</h4>
                 <h4>3. Go do awesome things and get proof</h4>
                 <h4>4. Upload the proof of your achievements and let your friends confirm your awesomeness!</h4>
                 <h4>5. Feel like you've achieved more in life</h4>

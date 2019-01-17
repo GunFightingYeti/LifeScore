@@ -3,7 +3,7 @@ import API from "../../utils/API";
 
 class Friend extends Component {
   state = {
-    userName: "User Name",
+    userName: "Username",
     avatar: "/assets/images/placeholder.jpg",
     score: 0,
     believability: 0,
