@@ -123,7 +123,7 @@ const achievementSeed = [
     date: new Date(Date.now())
   }, {
     name: "Successful Fisticuffs",
-    description: "Win consensual fist fight",
+    description: "Win a consensual fist fight",
     category: "Violent",
     worth: 10,
     passed: false,
@@ -294,7 +294,7 @@ const achievementSeed = [
     date: new Date(Date.now())
   }, {
     name: "I've Traveled",
-    description: "Visit 2 COuntries",
+    description: "Visit 2 Countries",
     category: "Adventure",
     worth: 10,
     passed: false,
@@ -303,7 +303,7 @@ const achievementSeed = [
     date: new Date(Date.now())
   }, {
     name: "I Like To Travel",
-    description: "Visit 5 COuntries",
+    description: "Visit 5 Countries",
     category: "Adventure",
     worth: 30,
     passed: false,
@@ -988,7 +988,7 @@ const achievementSeed = [
   }, {
     name: "Free Drinks",
     description: "Have someone buy you a round of drinks",
-    category: "Fod",
+    category: "Food",
     worth: 5,
     passed: false,
     saved: false,
@@ -1105,7 +1105,7 @@ const achievementSeed = [
   }, {
     name: "Flimsy Noir",
     description: "Watch a classic black and white movie",
-    category: "Fun",
+    category: "Entertainment",
     worth: 5,
     passed: false,
     saved: false,
@@ -1177,7 +1177,7 @@ const achievementSeed = [
   }, {
     name: "I Am Arthur",
     description: "Sit at a round table",
-    category: "Life",
+    category: "Fun",
     worth: 5,
     passed: false,
     saved: false,
@@ -1197,12 +1197,12 @@ const achievementSeed = [
 
 const playerSeed = [
   {
-    name: "WunderBare",
-    score: 12845,
-    avatar: "/assets/images/elizabeth.jpg",
-    believability: 6258,
+    name: "GunFightingYeti",
+    score: 5378,
+    avatar: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/39522543_10217308436645968_7509642345873145856_o.jpg?_nc_cat=108&_nc_ht=scontent.fapa1-1.fna&oh=cd97dc1d1fa0f6850543812865b4a248&oe=5CD445EB",
+    believability: 457,
     friends: [
-        "GunFightingYeti",
+        "WunderBare",
         "Knurtts",
         "Scarab27",
         "Drizt172",
@@ -1213,7 +1213,38 @@ const playerSeed = [
         "SassyCat"
     ],
     date: new Date(Date.now())
-  }
+  },
+  {
+    name: "WunderBare",
+    score: 12845,
+    avatar: "/assets/images/elizabeth.jpg",
+    believability: 6258,
+    friends: [
+        "GunFightingYeti",
+        "Knurtts",
+        "Scarab27",
+        "Drizt172",
+        "WriterManda",
+        "Krontime",
+        "Gummybearx3",
+        "SassyCat"
+    ],
+    date: new Date(Date.now())
+  },
+  {
+    name: "Knurtts",
+    score: 6934,
+    avatar: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/18520002_10154621365097151_8995648720660444281_n.jpg?_nc_cat=103&_nc_ht=scontent.fapa1-1.fna&oh=2d70746329814fc14456a1636bff537d&oe=5CB35C0E",
+    believability: 825,
+    friends: [
+        "WunderBare",
+        "GunFightingYeti",
+        "WriterManda",
+        "Krontime",
+        "SassyCat"
+    ],
+    date: new Date(Date.now())
+  },
 ];
 
 db.Achievement
