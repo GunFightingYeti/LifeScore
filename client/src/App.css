@@ -140,7 +140,8 @@ body {
   text-align: center;
 }
 
-#results {
+.results {
+  margin-top: 20px;
   padding-top: 12px;
   border: #282c34;
   border-style: solid;

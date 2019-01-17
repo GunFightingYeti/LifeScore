@@ -1,22 +1,23 @@
 import React, { Component } from "react";
-// import API from "../../utils/API";
+import API from "../../utils/API";
 
 class Stats extends Component {
   state = {
     saved: []
   }
 
-  // loadPlayer = () =>{
-  //   API.getPlayer()
-  //   .then(res => {
-  //     // console.log(res);
-  //     this.setState({friends: res.data[0].friends}); })
-  //   .catch(err => console.log(err))
-  // }
+  getSaved = () => {
+    API.getSaved()
+    .then(res => {
+      console.log(res);
+      this.setState({saved: res.data})
+      // .catch(err => console.log(err))
+    });
+  }
   
-  // componentDidMount() {
-  //   this.loadPlayer();
-  // }
+  componentDidMount() {
+    this.getSaved();
+  }
 
   render () {
     return (
@@ -30,14 +31,13 @@ class Stats extends Component {
           </div>
 
           <div className="row3">
-              <div className="col-12">
+              <div className="col-12 results">
 
               {this.state.saved.length ? (
                     <div>
-                      {/* <a href="/saved"> */}
-                        {this.state.friends.map((friend, index) => {
+                        {this.state.saved.map((chieves, index) => {
                           return (
-                            <a href="/friend" key={index}><button className="friendCard" data={friend}>{friend}</button></a>
+                            <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
                           );
                         })}
                     </div>

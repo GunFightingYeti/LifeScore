@@ -4,29 +4,21 @@ const playerController = require("../../controllers/playerController");
 
 
 router.route("/achievements")
-  .get(achievementController.findAll)
-  .post(achievementController.findAll);
+  .get(achievementController.findAll);
 
 router.route("/player")
   .post(playerController.findAll);
 
-router.route("/api/achievements/passed")
+router.route("/achievements/passed")
   .get(achievementController.findAllPassed);
 
 router
-  .route("/:id")
-  .get(achievementController.findById)
-  .put(achievementController.update);
-
-router
   .route("/achievements/:category")
-  .get(achievementController.findByCategory)
-  .put(achievementController.update);
+  .get(achievementController.findByCategory);
 
 router
   .route("/achievements/saved")
-  .post(achievementController.findBySaved)
-  .put(achievementController.update);
+  .post(achievementController.findBySaved);
 
 router
   .route("/achievements/save/:id")

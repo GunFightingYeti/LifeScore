@@ -41,7 +41,7 @@ loadPassed = () => {
           <div className="row">
 
               <div className="pageTitle">
-                  <h1 className=""><i className="fas fa-user"></i>  Me</h1>
+                  <h1><i className="fas fa-user"></i>  Me</h1>
               </div>
 
           </div>
@@ -61,24 +61,25 @@ loadPassed = () => {
           <h3>Latest: {this.state.latest}</h3>
           </div>
 
-          <div className="row row2">
+          <div className="row3">
+            <div className="col-12 results">
 
-          <h3 className="block">All Achieved:</h3>
+            <h3 className="block">All Achieved:</h3>
 
-          {this.state.achievements.length ? (
-              <div>
-                  {this.state.achievements.map((chieves, index) => {
-                    return (
-                      <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
-                    );
-                  })}
-              </div>
-          ) : (
-            <h2>Seize the day!</h2>
-          )}
+            {this.state.achievements.length ? (
+                <div>
+                    {this.state.achievements.map((chieves, index) => {
+                      return (
+                        <button className="achievement" key={index} data-id={chieves._id}>{chieves.name} - {chieves.description} - {chieves.worth} P</button>
+                      );
+                    })}
+                </div>
+            ) : (
+              <h2>Seize the day!</h2>
+            )}
 
+            </div>
           </div>
-
       </div>
       );  
   }

@@ -72,7 +72,7 @@ render() {
         </div>
 
         <div className="row3">
-            <div className="col-12" id="results">
+            <div className="col-12 results">
 
             <h1>{this.state.category}</h1>
 
