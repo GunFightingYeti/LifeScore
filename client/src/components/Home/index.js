@@ -59,7 +59,6 @@ class Home extends Component {
                 <a className="homebtn" href="/friends">Friends</a>
                 <a className="homebtn" href="/saved">Saved</a>
                 <a className="homebtn" href="/player">My Profile</a>
-                {/* <a className="homebtn" href="/stats">Stats</a> */}
 
             </div>
         </div>
