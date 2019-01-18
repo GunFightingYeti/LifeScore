@@ -54,18 +54,7 @@ class Browse extends Component {
       // console.log(res);
       // .catch(err => console.log(err))
     });
-    this.forceUpdate();
   }
-
-  // openCard = id => e => {
-  //   console.log(id);
-  //   API.saveChieve(id)
-  //   .then(res => {
-  //   console.log(res);
-  //   this.setState({showModal: true})
-  //   .catch(err => console.log(err))
-  //   });
-  // }
 
 render() {
     return (
@@ -124,13 +113,10 @@ render() {
                       }
 
                       {/* <button className="savebtn float-left" onClick={this.openCard(chieves._id)} data-id={chieves._id}>View</button>  */}
-                      <button className="savebtn float-left" data-id={chieves._id}>View</button> 
+                      <a className="savebtn float-left" data-id={chieves._id} href="/upload">View</a> 
                       
                       {/* Full achievement */}
                       <button className="achievement">{chieves.name} - {chieves.description} = {chieves.worth} S</button>
-
-                      {/* Title only */}
-                      {/* <button className="achievement">{chieves.name}</button> */}
                       </div>
                     );
                   })}
