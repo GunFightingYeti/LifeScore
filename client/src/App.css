@@ -223,6 +223,10 @@ li {
   list-style-type: none;
 }
 
+.titlebtn {
+  border: none;
+}
+
 
 /* Friends */
 .friendCard {
@@ -245,7 +249,6 @@ li {
   border-style: solid;
   transform: scale(1.2);
 }
-
 
 /* Footer */
 footer {

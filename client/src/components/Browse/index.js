@@ -6,14 +6,18 @@ class Browse extends Component {
   state = {
     results: [],
     category: "",
-    modal: "",
+    menuVisible: true,
   }
+
+  showMenu = () => {
+    this.setState({ menuVisible: true });
+  };
 
   getAll = category => e => {
     API.getAllChieves(category)
     .then(res => {
       // console.log(res);
-      this.setState({results: res.data, category: category})
+      this.setState({results: res.data, category: category, menuVisible: false})
       // .catch(err => console.log(err))
     });
   }
@@ -22,7 +26,7 @@ class Browse extends Component {
     API.getOneCategory(category)
     .then(res => {
       // console.log(res);
-      this.setState({results: res.data, category: category})
+      this.setState({results: res.data, category: category, menuVisible: false})
       // .catch(err => console.log(err))
     });
   }
@@ -31,13 +35,12 @@ class Browse extends Component {
     API.getSaved()
     .then(res => {
       // console.log(res);
-      this.setState({results: res.data, category: saved})
+      this.setState({results: res.data, category: saved, menuVisible: false})
       // .catch(err => console.log(err))
     });
   }
 
   saveChieve = id => e => {
-    console.log(id);
     API.saveChieve(id)
     .then(res => {
       // console.log(res);
@@ -45,28 +48,46 @@ class Browse extends Component {
     });
   }
 
-  openCard = id => e => {
-    console.log(id);
-    // API.saveChieve(id)
-    // .then(res => {
-    //   // console.log(res);
-    this.setState({modal: "Open"})
-    //   // .catch(err => console.log(err))
-    // });
+  unsaveChieve= id => e => {
+    API.unsaveChieve(id)
+    .then(res => {
+      // console.log(res);
+      // .catch(err => console.log(err))
+    });
+    this.forceUpdate();
   }
+
+  // openCard = id => e => {
+  //   console.log(id);
+  //   API.saveChieve(id)
+  //   .then(res => {
+  //   console.log(res);
+  //   this.setState({showModal: true})
+  //   .catch(err => console.log(err))
+  //   });
+  // }
 
 render() {
     return (
     <div className="container">
         <div className="row">
 
-            <div className="pageTitle">
-                <h1><i className="fas fa-journal-whills"></i> Browse</h1>
-            </div>
-
+        {this.state.menuVisible ? (
+          <div className="pageTitle">
+            <h1><i className="fas fa-journal-whills"></i> Browse</h1>
+          </div>
+        ) : (
+          <div className="pageTitle">
+            {/* <button className="titlebtn"> */}
+            <button className="titlebtn" onClick={this.showMenu.bind(this)}>
+              <h1><i className="fas fa-bars"></i> New Search</h1>
+            </button>
+          </div>
+        )}
         </div>
 
-        <div className="row3">
+        {this.state.menuVisible ? (
+          <div className="row3">
             <div className="col-12">
 
                 <button className="homebtn" onClick={this.getAll("All")}>All</button>
@@ -81,6 +102,9 @@ render() {
 
             </div>
         </div>
+        ) : (
+         null
+        )}
 
         <div className="row3">
             <div className="col-12 results p-3">
@@ -93,9 +117,14 @@ render() {
                     return (
                       <div key={index}>
                       {/* Save button */}
-                      {/* <button className="savebtn float-left" onClick={this.saveChieve(chieves._id)} data-id={chieves._id}>Save</button>  */}
 
-                      <button className="savebtn float-left" onClick={this.openCard(chieves._id)} data-id={chieves._id}>View</button> 
+                      {(this.state.category === "Saved")
+                       ? <button className="savebtn float-left" onClick={this.unsaveChieve(chieves._id)} data-id={chieves._id}>Delete</button> 
+                       : <button className="savebtn float-left" onClick={this.saveChieve(chieves._id)} data-id={chieves._id}>Save</button> 
+                      }
+
+                      {/* <button className="savebtn float-left" onClick={this.openCard(chieves._id)} data-id={chieves._id}>View</button>  */}
+                      <button className="savebtn float-left" data-id={chieves._id}>View</button> 
                       
                       {/* Full achievement */}
                       <button className="achievement">{chieves.name} - {chieves.description} = {chieves.worth} S</button>
@@ -111,6 +140,7 @@ render() {
             )}
 
           </div>
+          
       </div>
     </div>
     );  

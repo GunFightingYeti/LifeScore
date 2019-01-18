@@ -10,6 +10,9 @@ export default {
   saveChieve: function(id) {
     return axios.put("/api/achievements/save/" + id);
   },
+  unsaveChieve: function(id) {
+    return axios.put("/api/achievements/unsave/" + id);
+  },
   getSaved: function() {
     return axios.post("/api/achievements/saved");
   },
