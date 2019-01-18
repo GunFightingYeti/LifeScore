@@ -925,7 +925,7 @@ const achievementSeed = [
   }, {
     name: "Step Back from that Ledge",
     description: "Cut ties with all the lies you've been living in",
-    category: "Skills",
+    category: "Fun",
     worth: 5,
     passed: false,
     saved: false,
