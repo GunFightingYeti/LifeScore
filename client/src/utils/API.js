@@ -13,6 +13,9 @@ export default {
   unsaveChieve: function(id) {
     return axios.put("/api/achievements/unsave/" + id);
   },
+  passChieve: function(id) {
+    return axios.put("/api/achievements/pass/" + id);
+  },
   getSaved: function() {
     return axios.post("/api/achievements/saved");
   },

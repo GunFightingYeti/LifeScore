@@ -24,6 +24,9 @@ router.route("/achievements/save/:id")
 router.route("/achievements/unsave/:id")
   .put(achievementController.updateUnsaved);
 
+router.route("/achievements/pass/:id")
+  .put(achievementController.complete);
+
 router.route("/friends")
   .get(playerController.findAll);
 

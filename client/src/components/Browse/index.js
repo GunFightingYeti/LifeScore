@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from "../Modal";
 import API from "../../utils/API";
 
 class Browse extends Component {
@@ -7,11 +8,21 @@ class Browse extends Component {
     results: [],
     category: "",
     menuVisible: true,
+    display: "none",
+    title: "Title",
   }
 
   showMenu = () => {
     this.setState({ menuVisible: true });
   };
+
+  openModal = () => {
+    this.setState({ display: "block" });
+  }
+
+  closeModal = () => {
+    this.setState({ display: "none" });
+  }
 
   getAll = category => e => {
     API.getAllChieves(category)
@@ -50,6 +61,14 @@ class Browse extends Component {
 
   unsaveChieve= id => e => {
     API.unsaveChieve(id)
+    .then(res => {
+      // console.log(res);
+      // .catch(err => console.log(err))
+    });
+  }
+
+  passChieve= id => e => {
+    API.passChieve(id)
     .then(res => {
       // console.log(res);
       // .catch(err => console.log(err))
@@ -105,15 +124,16 @@ render() {
                   {this.state.results.map((chieves, index) => {
                     return (
                       <div key={index}>
-                      {/* Save button */}
 
+                      {/* Save button */}
                       {(this.state.category === "Saved")
                        ? <button className="savebtn float-left" onClick={this.unsaveChieve(chieves._id)} data-id={chieves._id}>Delete</button> 
                        : <button className="savebtn float-left" onClick={this.saveChieve(chieves._id)} data-id={chieves._id}>Save</button> 
                       }
 
                       {/* <button className="savebtn float-left" onClick={this.openCard(chieves._id)} data-id={chieves._id}>View</button>  */}
-                      <a className="savebtn float-left" data-id={chieves._id} href="/upload">View</a> 
+                      <button className="savebtn float-left" onClick={this.openModal.bind(this)} data-id={chieves._id}>View</button> 
+                      <button className="savebtn float-left" onClick={this.passChieve(chieves._id)} data-id={chieves._id}>Complete</button> 
                       
                       {/* Full achievement */}
                       <button className="achievement">{chieves.name} - {chieves.description} = {chieves.worth} S</button>
@@ -126,6 +146,11 @@ render() {
             )}
 
           </div>
+
+          {(this.state.display === "None")
+            ? <Modal display={this.state.display} title={this.state.title}></Modal>
+            : <Modal display={this.state.display} title={this.state.title}></Modal>
+          }
           
       </div>
     </div>

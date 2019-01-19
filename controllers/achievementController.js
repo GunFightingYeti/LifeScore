@@ -58,6 +58,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  complete: function(req, res) {
+    db.Achievement
+      .findOneAndUpdate({ _id: req.params.id }, {$set:{passed: true}})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   remove: function(req, res) {
     db.Achievement
       .findById({ _id: req.params.id })
