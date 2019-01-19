@@ -11,7 +11,6 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    this.setState = { user: false}
     window.fbAsyncInit = function() {
       window.FB.init({
         appId      : "1933768680045965",
@@ -47,11 +46,11 @@ class Login extends Component {
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
-  // checkLoginState = () => {
-  //   FB.getLoginStatus(function(response) {
-  //     statusChangeCallback(response);
-  //   });
-  // }
+  checkLoginState = () => {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
 
   // This is called with the results from from FB.getLoginStatus().
   statusChangeCallback = (response) => {
@@ -64,9 +63,7 @@ class Login extends Component {
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
-      this.setState = { user: true}
     } else {
-      this.setState = { user: false}
       // The person is not logged into your app or we are unable to tell.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
@@ -79,10 +76,17 @@ class Login extends Component {
     console.log('Welcome!  Fetching your information.... ');
     window.FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      this.setState = { user: true}
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
+  }
+
+  userTrue = () => {
+    this.setState({ user: true });
+    }
+
+  userFalse = () => {
+    this.setState({ user: false });
   }
 
   render () {
@@ -98,14 +102,14 @@ class Login extends Component {
               
                 <div className="col-12">
                    
-                  {(this.state.user === false)
+                  {(this.state.user === true)
                     ? <div>
                       <h1 className="mb-4">Login</h1>
-                      <div className="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
+                      <div className="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" onClick={this.userTrue.bind(this)}></div>
                     </div>
                     : <div>
                       <div className="row"> <h1>You're logged in!</h1> <a href="/home" className="btn btn-lg btn-outline-success mx-4">Continue to Game</a> </div>
-                      <div className="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
+                      <div className="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" onClick={this.userFalse.bind(this)}></div>
                     </div>
                   }
 
