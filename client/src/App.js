@@ -20,15 +20,16 @@ import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
+
   render() {
     const App = () => (
       <div>
         <Nav/>
         <Wrapper>
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/create" component={Create} />
             <Route exact path="/quiz" component={Quiz} />
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Login} />
             <Route exact path="/friends" component={Friends} />
             <Route exact path="/friend" component={Friend} />
             <Route exact path="/player" component={Player} />
