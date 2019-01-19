@@ -98,8 +98,6 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-        <div id="fb-root"></div>
-      
         // Here we run a very simple test of the Graph API after login is
         // successful.  See statusChangeCallback() for when this call is made.
         function testAPI() {
@@ -118,6 +116,8 @@
         the FB.login() function when clicked.
       -->
       
+      <div id="fb-root"></div>
+
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
       </fb:login-button>
       
