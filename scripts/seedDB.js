@@ -483,7 +483,7 @@ const achievementSeed = [
     date: new Date(Date.now())
   }, {
     name: "Now I'm Broke",
-    description: "Own a house",
+    description: "Buy your first house",
     category: "Life",
     worth: 175,
     passed: false,
@@ -1192,6 +1192,132 @@ const achievementSeed = [
     saved: false,
     belief: 0,
     date: new Date(Date.now())
+  }, {
+    name: "Patty Cake",
+    description: "Make yourself some bread from scratch",
+    category: "Food",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Gobble Gobble Mr. Tucker",
+    description: "Cook a holiday turkey and carve it yourself",
+    category: "Food",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Early Nerd Gets the Firm",
+    description: "Pay off your taxes at least four weeks before the deadline",
+    category: "Life",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Move Jeep, Get Out the Way!",
+    description: "Get your drivers license",
+    category: "Life",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Are You Still Watching?",
+    description: "Watch a trilogy (or more) of movies in one sitting",
+    category: "Entertainment",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "U B Stylin",
+    description: "Wear of peice of clothing that you made yourself",
+    category: "Skills",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "It's Beautiful!",
+    description: "Have artwork that you created, displayed publicly",
+    category: "Skills",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Mmm, Tastes So Fresh",
+    description: "Eat a meal composed entirely out of ingredients you grew/made yourself",
+    category: "Food",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Take That MyKEA",
+    description: "Build a peice of furniture that you made from scratch",
+    category: "Skills",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Build-A-Cabin",
+    description: "Build a log cabin by hand",
+    category: "Skills",
+    worth: 30,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Helping Hand",
+    description: "Go on a missions trip and help someone else",
+    category: "Social",
+    worth: 15,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Fancy Feet",
+    description: "Learn how to dance",
+    category: "Skills",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "No Business like Snow Business",
+    description: "Shovel someone else's driveway/sidewalk",
+    category: "Social",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Pass It On",
+    description: "Pay for the food or drink of the person behind you in line",
+    category: "Social",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
   }
 ];
 
@@ -1217,7 +1343,7 @@ const playerSeed = [
   {
     name: "WunderBare",
     score: 12845,
-    avatar: "/assets/images/elizabeth.jpg",
+    avatar: "https://scontent.fapa1-1.fna.fbcdn.net/v/t31.0-8/16665956_10154220639121516_4389822730891899068_o.jpg?_nc_cat=106&_nc_ht=scontent.fapa1-1.fna&oh=b7df74878244bd09937bcb8057c4c44d&oe=5CB76167",
     believability: 6258,
     friends: [
         "GunFightingYeti",
