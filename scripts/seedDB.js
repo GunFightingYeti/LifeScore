@@ -1318,7 +1318,71 @@ const achievementSeed = [
     saved: false,
     belief: 0,
     date: new Date(Date.now())
+  }, {
+    name: "Start Your Day Right",
+    description: "Make your bed",
+    category: "Adventure",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Look at that View",
+    description: "Have 'lunch' on a mountain",
+    category: "Adventure",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Audio Media Circus",
+    description: "Listen to a vinyl record, cassette tape, CD and digital media in one day",
+    category: "Entertainment",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Video Media Circus",
+    description: "Watch a VHS, DVD, BluRay and 4K movie in one day",
+    category: "Entertainment",
+    worth: 10,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "Money Bags",
+    description: "Get a pay raise at your job",
+    category: "Life",
+    worth: 5,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
+  }, {
+    name: "The Scrooge McDuck",
+    description: "Dive head first into a pool of coins",
+    category: "Fun",
+    worth: 20,
+    passed: false,
+    saved: false,
+    belief: 0,
+    date: new Date(Date.now())
   }
+  // , {
+  //   name: "",
+  //   description: "",
+  //   category: "",
+  //   worth: ,
+  //   passed: false,
+  //   saved: false,
+  //   belief: 0,
+  //   date: new Date(Date.now())
+  // }
 ];
 
 const playerSeed = [
