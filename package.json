@@ -2,8 +2,11 @@
   "name": "lifescore",
   "version": "1.0.0",
   "description": "Get credit for your achievements in life",
+  "license": "ISC",
   "main": "server.js",
-  "engines": { "node": "10.13.0"},
+  "engines": {
+    "node": "10.13.0"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -14,9 +17,8 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "homepage" : "https://lifescore1.herokuapp.com",
+  "homepage": "https://lifescore1.herokuapp.com",
   "author": "Tim Lewis",
-  "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
     "nodemon": "^1.11.0"
@@ -25,7 +27,9 @@
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "if-env": "^1.0.4",
     "mongoose": "^5.0.17",
-    "if-env": "^1.0.4"
+    "react-facebook": "^7.0.2",
+    "react-facebook-login": "^4.1.1"
   }
 }
