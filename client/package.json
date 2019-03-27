@@ -4,6 +4,7 @@
   "proxy": "http://localhost:3001",
   "license": "ISC",
   "dependencies": {
+    "all": "^0.0.0",
     "axios": "^0.18.0",
     "bcrypt": "^3.0.2",
     "express": "^4.16.4",
